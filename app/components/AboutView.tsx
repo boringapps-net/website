@@ -1,11 +1,7 @@
 import { CORPORATE_INFO } from '../data/legal';
 import { Landmark, Mail, ShieldAlert, Cpu, Award, Terminal, Handshake } from 'lucide-react';
 
-interface AboutViewProps {
-  onNavigateToPolicy: (policyName: 'privacy' | 'terms') => void;
-}
-
-export function AboutView({ onNavigateToPolicy }: AboutViewProps) {
+export function AboutView() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12 space-y-12 font-sans animate-fade-in text-[#1A1A1A]">
       
