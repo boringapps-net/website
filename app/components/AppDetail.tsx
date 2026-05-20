@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router';
 import { AppMetadata } from '../types';
 import {
   ArrowLeft,
@@ -11,28 +12,26 @@ import {
 
 interface AppDetailProps {
   app: AppMetadata;
-  onBack: () => void;
 }
 
-export function AppDetail({ app, onBack }: AppDetailProps) {
+export function AppDetail({ app }: AppDetailProps) {
   const [activeShot, setActiveShot] = useState(0);
 
   useEffect(() => {
     setActiveShot(0);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [app]);
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8 space-y-12 animate-fade-in font-sans text-[#1A1A1A]">
       <div>
-        <button
+        <Link
           id="detail-back-btn"
-          onClick={onBack}
+          to="/"
           className="inline-flex items-center gap-2 text-xs font-mono font-bold text-[#1A1A1A] hover:text-[#E63946] border-2 border-[#1A1A1A] px-4 py-2 bg-white shadow-[2px_2px_0px_0px_rgba(26,26,26,1)] hover:shadow-[4px_4px_0px_0px_rgba(26,26,26,1)] hover:-translate-x-[1px] hover:-translate-y-[1px] transition-all duration-150 cursor-pointer group"
         >
           <ArrowLeft className="w-4 h-4 text-[#E63946] group-hover:-translate-x-1 transition duration-200" />
           Back to Portfolio
-        </button>
+        </Link>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">

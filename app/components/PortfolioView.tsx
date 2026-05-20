@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router';
 import { APPS } from '../data/apps';
 import {
   Monitor,
@@ -11,14 +12,9 @@ import {
   Clock,
 } from 'lucide-react';
 
-interface PortfolioViewProps {
-  onSelectApp: (appId: string) => void;
-  onNavigate: (pageId: 'home' | 'app' | 'privacy' | 'terms' | 'about') => void;
-}
-
 type PlatformFilter = 'all' | 'mac' | 'windows' | 'ios' | 'android';
 
-export function PortfolioView({ onSelectApp }: PortfolioViewProps) {
+export function PortfolioView() {
   const [filter, setFilter] = useState<PlatformFilter>('all');
 
   const filteredApps = APPS.filter((app) => {
@@ -104,10 +100,10 @@ export function PortfolioView({ onSelectApp }: PortfolioViewProps) {
         {/* 3. Application Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredApps.map((app) => (
-            <div
+            <Link
               id={`app-card-${app.id}`}
               key={app.id}
-              onClick={() => onSelectApp(app.id)}
+              to={`/apps/${app.id}`}
               className="group bg-white border-2 border-[#1A1A1A] p-6 flex flex-col justify-between shadow-[4px_4px_0px_0px_rgba(26,26,26,1)] hover:shadow-[8px_8px_0px_0px_rgba(26,26,26,1)] hover:-translate-x-[2px] hover:-translate-y-[2px] transition-all duration-200 cursor-pointer overflow-hidden relative rounded-none"
             >
               <div className="absolute top-0 left-0 w-full h-[6px] bg-[#E63946] border-b-2 border-[#1A1A1A]" />
@@ -157,7 +153,7 @@ export function PortfolioView({ onSelectApp }: PortfolioViewProps) {
                   DETAILS <ChevronRight className="w-3.5 h-3.5" />
                 </span>
               </div>
-            </div>
+            </Link>
           ))}
 
           {filteredApps.length === 0 && (
