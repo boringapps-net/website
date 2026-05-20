@@ -5,7 +5,6 @@ import {
   Scripts,
   ScrollRestoration,
   isRouteErrorResponse,
-  useLocation,
 } from 'react-router';
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
@@ -56,7 +55,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  const location = useLocation();
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
@@ -70,18 +68,7 @@ export default function App() {
       <Header />
 
       <main className="flex-grow max-w-7xl w-full mx-auto px-4 md:px-8 py-10 relative">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={location.pathname}
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -12 }}
-            transition={{ duration: 0.18, ease: 'easeOut' }}
-            className="w-full h-full"
-          >
-            <Outlet />
-          </motion.div>
-        </AnimatePresence>
+        <Outlet />
       </main>
 
       <Footer />
