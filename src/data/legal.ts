@@ -26,7 +26,7 @@ export const PRIVACY_POLICY: LegalDocument = {
       heading: '1. Overview of Our Offline-First Privacy Guarantee',
       content: [
         'At BoringApps.net (a collaboration between The IT Dept Pty Ltd and CURIOLA PTY LTD), we believe that utility applications should be run where they belong: on your computer or mobile screen—not in the cloud. Our core design ethos is "offline-first".',
-        'When you use BulkSmith, ShrinkPress, CSV-Slicer, ClipboardClean, CronKeep, or HashSeal, your files, databases, configurations, dynamic clipboard buffers, and cryptographic inputs are processed 100% locally on your machine. Your private documents, files, passwords, API tokens, and lists are never transmitted to our servers, stored in commercial databases of ours, or rented/sold to third-party institutions. We do not have visual or functional access to any files you compress, rename, integrity-check, or schedule.'
+        'When you use Machole, Repsense, or any other utility under the BoringApps brand, your camera, microphone, screen captures, workout history, and other inputs are processed 100% locally on your device. Recordings, training data, and personal content are never transmitted to our servers, stored in commercial databases of ours, or rented/sold to third-party institutions.'
       ]
     },
     {
@@ -81,7 +81,7 @@ export const TERMS_OF_SERVICE: LegalDocument = {
     {
       heading: '2. Grant of Intellectual Property Licenses',
       content: [
-        '• For Purchased Utilities: Buying a license to BulkSmith, ShrinkPress, CSV-Slicer, ClipboardClean, CronKeep, or HashSeal grants you a non-exclusive, non-transferable, and revocable personal installation license to execute the software on compatible personal or professional workstations.',
+        '• For Purchased Utilities: Buying a license to Machole, Repsense, or any other BoringApps utility grants you a non-exclusive, non-transferable, and revocable personal installation license to execute the software on compatible personal or professional devices.',
         '• Commercial Use: Unless clearly designated otherwise in custom enterprise plans, standard lifetime licenses extend fully both to individual consumer and commercial professional development work.',
         '• Intellectual Property: All application assets, brand designs, core codebase, algorithmic patterns, names, and trademark vectors remain the absolute proprietary intellectual property of The IT Dept Pty Ltd and CURIOLA PTY LTD.'
       ]
