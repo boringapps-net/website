@@ -2,6 +2,7 @@ import { Link } from 'react-router';
 import { APPS } from '../data/apps';
 import { CORPORATE_INFO } from '../data/legal';
 import { ShieldCheck, Scale, Globe, Mail } from 'lucide-react';
+import { Logo } from './Logo';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -15,9 +16,7 @@ export function Footer() {
             to="/"
             className="flex items-center gap-2 group text-left cursor-pointer focus:outline-none"
           >
-            <div className="w-8 h-8 bg-white text-[#1A1A1A] flex items-center justify-center font-mono font-black text-xs group-hover:bg-[#E63946] group-hover:text-white transition duration-150">
-              B
-            </div>
+            <Logo variant="light" className="w-8 h-8 border border-white/20" />
             <span className="font-sans font-black text-base text-white">
               BoringApps<span className="text-[#E63946] font-normal">.net</span>
             </span>

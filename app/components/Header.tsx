@@ -1,4 +1,5 @@
 import { NavLink, useLocation } from 'react-router';
+import { Logo } from './Logo';
 
 export function Header() {
   const location = useLocation();
@@ -12,9 +13,7 @@ export function Header() {
           id="nav-logo"
           className="flex items-center gap-3 group cursor-pointer text-left focus:outline-none"
         >
-          <div className="w-10 h-10 bg-[#1A1A1A] flex items-center justify-center font-mono font-extrabold text-base text-white group-hover:bg-[#E63946] transition duration-150 shadow-[2px_2px_0px_0px_rgba(26,26,26,0.3)] group-hover:shadow-[2px_2px_0px_0px_rgba(230,57,70,0.3)]">
-            B
-          </div>
+          <Logo className="w-10 h-10 border-2 border-[#1A1A1A] shadow-[2px_2px_0px_0px_rgba(26,26,26,0.3)] group-hover:shadow-[2px_2px_0px_0px_rgba(230,57,70,0.4)] group-hover:-translate-x-[1px] group-hover:-translate-y-[1px] transition-all duration-150" />
           <div>
             <h1 className="font-sans font-black text-xl tracking-tighter text-[#1A1A1A] leading-none">
               BoringApps<span className="text-[#E63946]">.net</span>
