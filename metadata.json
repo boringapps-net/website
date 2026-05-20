@@ -1,0 +1,6 @@
+{
+  "name": "BoringApps.net",
+  "description": "Portfolio and information hub for BoringApps.net, building unsexy but incredibly useful iOS, Android, and Desktop utility apps.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
