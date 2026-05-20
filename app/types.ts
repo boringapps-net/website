@@ -1,5 +1,3 @@
-export type PageId = 'home' | 'app' | 'privacy' | 'terms' | 'about';
-
 export type Platform = 'ios' | 'android' | 'mac' | 'windows' | 'web';
 
 export type AppStatus = 'shipped' | 'coming-soon';

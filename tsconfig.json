@@ -1,26 +1,28 @@
 {
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".react-router/types/**/*"
+  ],
   "compilerOptions": {
-    "target": "ES2022",
-    "experimentalDecorators": true,
-    "useDefineForClassFields": false,
-    "module": "ESNext",
-    "lib": [
-      "ES2022",
-      "DOM",
-      "DOM.Iterable"
-    ],
-    "skipLibCheck": true,
-    "moduleResolution": "bundler",
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],
+    "types": ["node", "vite/client"],
     "isolatedModules": true,
-    "moduleDetection": "force",
-    "allowJs": true,
+    "esModuleInterop": true,
     "jsx": "react-jsx",
+    "module": "ES2022",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "target": "ES2022",
+    "strict": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "rootDirs": [".", "./.react-router/types"],
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "~/*": ["./app/*"]
     },
-    "allowImportingTsExtensions": true,
     "noEmit": true
   }
 }
