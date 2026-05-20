@@ -19,7 +19,6 @@ export function AppDetail({ app }: AppDetailProps) {
 
   useEffect(() => {
     setActiveShot(0);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [app]);
 
   return (
