@@ -94,19 +94,24 @@ export function AppDetail({ app }: AppDetailProps) {
           <div className="space-y-3">
             {app.status === 'shipped' && app.appStoreUrl ? (
               <div className="space-y-3">
-                <a
-                  href={app.appStoreUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full"
-                  aria-label={`Download ${app.name} on the Mac App Store`}
-                >
-                  <img
-                    src="https://tools.applemediaservices.com/api/badges/download-on-the-mac-app-store/black/en-us?h=60"
-                    alt="Download on the Mac App Store"
-                    className="h-14"
-                  />
-                </a>
+                {(() => {
+                  const isMac = app.platforms.includes('mac');
+                  const badgeSrc = isMac
+                    ? 'https://tools.applemediaservices.com/api/badges/download-on-the-mac-app-store/black/en-us?h=60'
+                    : 'https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?h=60';
+                  const badgeAlt = isMac ? 'Download on the Mac App Store' : 'Download on the App Store';
+                  return (
+                    <a
+                      href={app.appStoreUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-fit"
+                      aria-label={badgeAlt + ` — ${app.name}`}
+                    >
+                      <img src={badgeSrc} alt={badgeAlt} className="h-14" />
+                    </a>
+                  );
+                })()}
                 {app.websiteUrl && (
                   <a
                     href={app.websiteUrl}
