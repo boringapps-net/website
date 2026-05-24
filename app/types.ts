@@ -2,6 +2,25 @@ export type Platform = 'ios' | 'android' | 'mac' | 'windows' | 'web';
 
 export type AppStatus = 'shipped' | 'coming-soon';
 
+export interface LegalDocument {
+  title: string;
+  lastUpdated: string;
+  sections: {
+    heading: string;
+    content: string | string[];
+  }[];
+}
+
+export interface SupportContent {
+  intro: string;
+  contactEmail: string;
+  sourceUrl?: string;
+  sections: {
+    heading: string;
+    content: string | string[];
+  }[];
+}
+
 export interface AppMetadata {
   id: string;
   name: string;
@@ -19,17 +38,11 @@ export interface AppMetadata {
   screenshots?: { src: string; alt: string }[];
   appStoreUrl?: string;
   websiteUrl?: string;
+  sourceUrl?: string;
   pricing: string;
   releaseDate?: string;
   currentVersion?: string;
   systemRequirements: string;
-}
-
-export interface LegalDocument {
-  title: string;
-  lastUpdated: string;
-  sections: {
-    heading: string;
-    content: string | string[];
-  }[];
+  privacyPolicy?: LegalDocument;
+  support?: SupportContent;
 }

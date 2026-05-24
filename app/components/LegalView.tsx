@@ -13,13 +13,13 @@ export function LegalView({ tab }: LegalViewProps) {
     <div className="max-w-4xl mx-auto px-4 py-12 space-y-8 font-sans animate-fade-in text-[#1A1A1A]">
       <div className="space-y-3.5 border-b-2 border-[#1A1A1A] pb-6 text-center md:text-left">
         <div className="inline-flex items-center gap-1.5 px-4 py-2 bg-white border-2 border-[#1A1A1A] text-xs text-[#1A1A1A] font-mono font-bold select-none shadow-[2px_2px_0px_0px_rgba(26,26,26,1)]">
-          <Landmark className="w-3.5 h-3.5 text-[#E63946]" /> Australian Commonwealth Compliance Vault
+          <Landmark className="w-3.5 h-3.5 text-[#E63946]" /> Legal
         </div>
         <h1 className="text-3xl md:text-4xl font-black text-[#1A1A1A] tracking-tighter uppercase leading-none pt-2">
           {doc.title}
         </h1>
-        <p className="text-xs font-mono text-gray-550 uppercase font-black">
-          Last reviewed: {doc.lastUpdated} | Governing laws: New South Wales & Victoria, Commonwealth of Australia
+        <p className="text-xs font-mono text-gray-500 uppercase font-black">
+          Last updated: {doc.lastUpdated} | Governed by NSW, Australia
         </p>
       </div>
 

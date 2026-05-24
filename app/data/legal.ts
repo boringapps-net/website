@@ -1,116 +1,112 @@
 import { LegalDocument } from '../types';
 
 export const CORPORATE_INFO = {
-  jointVentureName: 'BoringApps.net',
+  brandName: 'BoringApps.net',
   partners: [
     {
       name: 'The IT Dept Pty Ltd',
       abn: '12 665 405 505',
-      address: 'Sydney, NSW, Australia'
+      address: 'Sydney, NSW, Australia',
     },
     {
       name: 'CURIOLA PTY LTD',
       abn: '85 683 066 748',
-      address: 'Melbourne, VIC, Australia'
-    }
+      address: 'Melbourne, VIC, Australia',
+    },
   ],
-  contactEmail: 'legal@boringapps.net',
-  supportEmail: 'support@boringapps.net'
+  contactEmail: 'hello@boringapps.net',
 };
 
 export const PRIVACY_POLICY: LegalDocument = {
   title: 'Privacy Policy',
-  lastUpdated: 'May 20, 2026',
+  lastUpdated: 'May 24, 2026',
   sections: [
     {
-      heading: '1. Overview of Our Offline-First Privacy Guarantee',
+      heading: '1. Summary',
       content: [
-        'At BoringApps.net (a collaboration between The IT Dept Pty Ltd and CURIOLA PTY LTD), we believe that utility applications should be run where they belong: on your computer or mobile screen—not in the cloud. Our core design ethos is "offline-first".',
-        'When you use Machole, Repsense, or any other utility under the BoringApps brand, your camera, microphone, screen captures, workout history, and other inputs are processed 100% locally on your device. Recordings, training data, and personal content are never transmitted to our servers, stored in commercial databases of ours, or rented/sold to third-party institutions.'
-      ]
+        'BoringApps.net is a small project run by two Australian developers — Nick Pratley (The IT Dept Pty Ltd, ABN 12 665 405 505) and the team behind CURIOLA PTY LTD (ABN 85 683 066 748).',
+        "Our apps run on your device. We don't operate a backend, we don't run analytics, and we don't collect or transmit your data. Each app may have its own privacy policy that goes into the detail for that app — this page covers the website itself and our overall stance.",
+      ],
     },
     {
-      heading: '2. Joint Venture Structure & ABN Disclosures',
+      heading: '2. What this website collects',
       content: [
-        'BoringApps.net operates as a joint venture initiative co-funded and managed under Australian regulations by the following registered entities:',
-        '• The IT Dept Pty Ltd (ABN 12 665 405 505) based in Melbourne / Sydney, Australia.',
-        '• CURIOLA PTY LTD (ABN 85 683 066 748) based in Melbourne, Australia.',
-        'Under this collaborative structure, both Pty Ltd corporations act as joint-controllers and operators of the product channels, digital storefronts, and commercial transactions.'
-      ]
+        'This site is a static set of pages describing our apps. It does not set tracking cookies, it does not run analytics, and it does not log visitors. It uses only the standard hosting access logs the static host keeps for short-term operational reasons.',
+        'If you email us at hello@boringapps.net, we keep your email and the contents of your message for as long as we need to answer you.',
+      ],
     },
     {
-      heading: '3. What Limited Information We Collect',
+      heading: '3. What our apps collect',
       content: [
-        'Although our utility applications process all user-data locally, we may gather sparse metadata to handle licensing and improve overall product reliability:',
-        '• Transaction and Licensing Metadata: If you purchase a lifetime license or pro tier through our web checkout or mobile app stores, we process purchase tokens, subscription timestamps, and payment platform identifiers (primarily administered securely via Google Play Billing, Apple App Store Checkout, or Stripe). We never see or store your payment card numbers.',
-        '• Store Telemetry & Crash Reporting: By default, platform app stores (Apple App Store and Google Play Console) automatically assemble crash records and anonymous system specifications when a program fails. This telemetry is aggregated, strictly de-identified, and strictly accessible only to our development team to resolve memory bugs.',
-        '• Optional Support Inquiries: When you transmit support tickets, legal complaints, or custom feature requests to support@boringapps.net, we process your email address, name, and any text logs you provide solely to remediate your issue.'
-      ]
+        'The short answer: nothing leaves your device unless an app explicitly tells you it will.',
+        'For app-specific detail, see the privacy policy linked on each app\'s page. The summary for each currently-shipped app:',
+        '• Machole — records audio and video locally and saves to wherever you choose on your Mac. No network calls at runtime.',
+        '• Sextant — talks directly from your phone to the Kubernetes clusters you configure. Your credentials live in the iOS Keychain (or Android Keystore) and never leave the device. No analytics, telemetry, or crash reporters. Full source published.',
+        '• Repsense — workout history is stored locally in an on-device SQLite database. No accounts, no sync, no analytics.',
+      ],
     },
     {
-      heading: '4. Australian Privacy Principles (APPs) Accordance',
+      heading: '4. Purchases and the app stores',
       content: [
-        'As registered Australian proprietary corporations, we strive to conform strictly with the Privacy Act 1988 (Cth) and the Australian Privacy Principles (APPs). Under these guidelines, you possess strong rights to verify what limited personal connection metrics we retain (such as licensing details or support emails), request corrections, or demand complete database scrubbing.',
-        'If you belong to the European Economic Area (EEA), you enjoy parallel General Data Protection Regulation (GDPR) rights to easily inspect, revoke, download, or delete any licensing metadata stored on our authentication nodes. Direct all security queries to legal@boringapps.net.'
-      ]
+        'If you buy one of our paid apps via the App Store or Google Play, the store handles your payment — we never see your card details. The platform passes us aggregate sales data and anonymous crash records, which we use only to fix bugs.',
+        'If you buy a license directly through this site, we record the transaction (email address, license key, timestamp) so we can email you the key and validate it. We don\'t share that information with anyone else.',
+      ],
     },
     {
-      heading: '5. Technical Cookies on Our Website',
+      heading: '5. Your rights',
       content: [
-        'BoringApps.net uses clean, light-weight, native browser storage (localStorage) only to persist configuration layouts (like active page states, interface themes, or simulator configurations). We do not employ third-party advertising trackers, targeting cookies, or behavioral beacons, ensuring high-speed access.'
-      ]
+        'You\'re entitled to ask what we have on file, ask us to correct it, or ask us to delete it. If you\'re in Australia these rights come from the Privacy Act 1988 (Cth); if you\'re in the EEA they come from the GDPR. Either way the request goes to the same place — hello@boringapps.net.',
+      ],
     },
     {
-      heading: '6. Modifications and Amendments',
-      content: 'We reserve the structural right to adapt this Privacy Policy at any time to align with legal developments or app updates. The current active version is perpetually visible alongside the relevant Australian Business Numbers in our web document vault.'
-    }
-  ]
+      heading: '6. Changes',
+      content:
+        'If we change how we handle data we\'ll update this page and bump the "Last updated" date above. Material changes that affect a shipped app will also show up in that app\'s release notes.',
+    },
+  ],
 };
 
 export const TERMS_OF_SERVICE: LegalDocument = {
   title: 'Terms of Service',
-  lastUpdated: 'May 20, 2026',
+  lastUpdated: 'May 24, 2026',
   sections: [
     {
-      heading: '1. Agreement to Terms and Licensing Scope',
+      heading: '1. Who we are',
       content: [
-        'By utilizing our website (BoringApps.net) or installing any utility software issued under the BoringApps brand, you agree to these legally binding Terms of Service.',
-        'These terms represent a contract between you (the licensee) and the joint venture partners: The IT Dept Pty Ltd (ABN 12 665 405 505) and CURIOLA PTY LTD (ABN 85 683 066 748). If you do not agree, do not use our services.'
-      ]
+        'BoringApps.net is a label used by two small Australian companies — The IT Dept Pty Ltd (ABN 12 665 405 505) and CURIOLA PTY LTD (ABN 85 683 066 748) — to publish their utility apps together.',
+        'By using this site or any app we publish under the BoringApps brand, you agree to these terms. If you don\'t, don\'t use them.',
+      ],
     },
     {
-      heading: '2. Grant of Intellectual Property Licenses',
+      heading: '2. Licenses',
       content: [
-        '• For Purchased Utilities: Buying a license to Machole, Repsense, or any other BoringApps utility grants you a non-exclusive, non-transferable, and revocable personal installation license to execute the software on compatible personal or professional devices.',
-        '• Commercial Use: Unless clearly designated otherwise in custom enterprise plans, standard lifetime licenses extend fully both to individual consumer and commercial professional development work.',
-        '• Intellectual Property: All application assets, brand designs, core codebase, algorithmic patterns, names, and trademark vectors remain the absolute proprietary intellectual property of The IT Dept Pty Ltd and CURIOLA PTY LTD.'
-      ]
+        'Buying a license for one of our paid apps gives you a personal, non-transferable right to install and run the software on your own devices. Commercial use is fine.',
+        'The source code, trade marks, and design of the apps stay ours unless we\'ve explicitly published the source under a permissive licence (Sextant, for example, is published under FSL-1.1-MIT — see the licence terms on its repository).',
+      ],
     },
     {
-      heading: '3. Australian Consumer Law & Guarantee Frameworks',
+      heading: '3. Refunds and consumer rights',
       content: [
-        'Our commercial software packages arrive with exhaustive statutory guarantees that cannot be excluded under the Australian Consumer Law (Schedule 2 of the Competition and Consumer Act 2010 (Cth)). This includes visual standards of merchantability, functional matches to marketing descriptions, and fitness for stated unsexy software tasks.',
-        '• Faults: You are entitled to a complete refund or replacement licensing key for any terminal software failures that constitute a major technical breakdown. We respect consumer refund windows on respective storefronts.',
-        '• International Customers: Users placing transactions outside the Commonwealth of Australia acknowledge standard digital commerce protections but recognize that local statutory warranties are anchored primarily under Australian federal frameworks.'
-      ]
+        'If you bought via the App Store or Google Play, refund requests go through the store. We\'ll honour anything the store decides.',
+        'If you bought directly from us and something doesn\'t work as described, get in touch at hello@boringapps.net and we\'ll refund you. Australian customers also have the statutory guarantees set out in the Australian Consumer Law (Schedule 2 of the Competition and Consumer Act 2010 (Cth)) — those can\'t be excluded.',
+      ],
     },
     {
-      heading: '4. Limitation of Liability & Indemnification Warnings',
+      heading: '4. Limits',
       content: [
-        'Our utilities are designed specifically to run offline, modifying local file pathways, renaming files, parsing system schedulers, and sanitizing clipboard text based on user directions. Because directory operations and task automation are inherently subject to user input configuration errors (such as incorrect regex criteria or accidental deletion schedules):',
-        '• We assume NO responsibility for accidental file-structure overrides, data deletion, cron configuration system lockups, or cryptographic hash mismatches stemming from manual operator configurations.',
-        '• To the absolute maximum threshold permitted by Australian Federal Law and state jurisdictions, the aggregate commercial liability of The IT Dept Pty Ltd and CURIOLA PTY LTD shall not exceed the original Australian dollar transaction cost paid by you for the specific application license of ours.'
-      ]
+        'Our apps process files, network traffic, and user-supplied configuration on your device. We try hard to make them reliable, but we can\'t guarantee they\'ll handle every edge case in your environment.',
+        'We\'re not liable for indirect or consequential losses, and our total liability for any one app is capped at what you paid for it.',
+      ],
     },
     {
-      heading: '5. Code Decompilation & Reverse-Engineering',
-      content: [
-        'By running our software packages, you agree not to reproduce, dismantle, reverse-engineer, decompile, or bypass cryptographic license managers within any BoringApps product. You shall not redistribute altered binaries as competitor products, or run unlicensed modifications on multi-user corporate nodes.'
-      ]
+      heading: '5. Reverse engineering',
+      content:
+        'For closed-source apps, please don\'t decompile, repackage, or redistribute the binaries. For open-source apps (currently Sextant), follow the licence published in the repository.',
     },
     {
-      heading: '6. Governing Jury Selection & Arbitration State',
-      content: 'These agreements, terms, and licenses are governed, construed, and enforced exclusively in accordance with the laws of the State of New South Wales (NSW) and the State of Victoria (VIC), Australia. All parties irrevocably submit to the non-exclusive jurisdiction of the respective localized courts.'
-    }
-  ]
+      heading: '6. Governing law',
+      content:
+        'These terms are governed by the law of New South Wales, Australia.',
+    },
+  ],
 };
