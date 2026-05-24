@@ -24,13 +24,8 @@ export function PortfolioView() {
 
   return (
     <div className="space-y-16 py-8 animate-fade-in font-sans text-[#1A1A1A]">
-      {/* 1. Hero Manifest Section */}
+      {/* 1. Hero */}
       <section className="text-center space-y-6 max-w-4xl mx-auto px-4">
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border-2 border-[#1A1A1A] text-xs font-mono font-bold select-none text-[#1A1A1A] shadow-[2px_2px_0px_0px_rgba(26,26,26,1)]">
-          <span className="w-2.5 h-2.5 bg-[#E63946]" />
-          The IT Dept × Curiola Joint Venture
-        </div>
-
         <h1 className="text-4xl md:text-6xl font-black tracking-tighter text-[#1A1A1A] font-sans leading-none pt-4">
           WE BUILD <span className="line-through decoration-[#E63946] decoration-[6px]">UNSEXY</span> <br />
           <span className="text-white bg-[#1A1A1A] px-2.5 py-1 inline-block mt-2">ACTUALLY USEFUL</span> APPS.
@@ -41,22 +36,18 @@ export function PortfolioView() {
           do one job and get out of the way.
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 max-w-3xl mx-auto text-left">
+        <div className="grid grid-cols-3 gap-4 pt-6 max-w-2xl mx-auto text-left">
           <div className="bg-white border-2 border-[#1A1A1A] p-4 space-y-1 shadow-[3px_3px_0px_0px_rgba(26,26,26,1)]">
             <span className="block text-[10px] uppercase font-mono tracking-wider text-gray-400 font-bold">Processing</span>
-            <span className="block text-xs font-extrabold text-[#1A1A1A]">100% on-device</span>
+            <span className="block text-xs font-extrabold text-[#1A1A1A]">On-device</span>
           </div>
           <div className="bg-white border-2 border-[#1A1A1A] p-4 space-y-1 shadow-[3px_3px_0px_0px_rgba(26,26,26,1)]">
             <span className="block text-[10px] uppercase font-mono tracking-wider text-gray-400 font-bold">Telemetry</span>
             <span className="block text-xs font-extrabold text-[#1A1A1A]">Zero</span>
           </div>
           <div className="bg-white border-2 border-[#1A1A1A] p-4 space-y-1 shadow-[3px_3px_0px_0px_rgba(26,26,26,1)]">
-            <span className="block text-[10px] uppercase font-mono tracking-wider text-gray-400 font-bold">Distribution</span>
-            <span className="block text-xs font-extrabold text-[#1A1A1A]">Apple & Google Stores</span>
-          </div>
-          <div className="bg-white border-2 border-[#1A1A1A] p-4 space-y-1 shadow-[3px_3px_0px_0px_rgba(26,26,26,1)]">
-            <span className="block text-[10px] uppercase font-mono tracking-wider text-gray-400 font-bold">Venture</span>
-            <span className="block text-xs font-extrabold text-[#1A1A1A]">Dual Pty Ltd</span>
+            <span className="block text-[10px] uppercase font-mono tracking-wider text-gray-400 font-bold">Pricing</span>
+            <span className="block text-xs font-extrabold text-[#1A1A1A]">One-off, not monthly</span>
           </div>
         </div>
       </section>

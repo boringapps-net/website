@@ -8,6 +8,9 @@ import {
   Clock,
   Apple,
   Mail,
+  ShieldCheck,
+  LifeBuoy,
+  Github,
 } from 'lucide-react';
 
 interface AppDetailProps {
@@ -36,7 +39,7 @@ export function AppDetail({ app }: AppDetailProps) {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
         {/* Left: product info */}
-        <div className="lg:col-span-5 space-y-8">
+        <div className="lg:col-span-5 space-y-6">
           <div className="space-y-4">
             <div className="flex items-center gap-4">
               <div className="w-16 h-16 bg-white flex items-center justify-center border-2 border-[#1A1A1A] rounded-none shadow-[2px_2px_0px_0px_rgba(26,26,26,1)] overflow-hidden">
@@ -152,6 +155,38 @@ export function AppDetail({ app }: AppDetailProps) {
               </div>
             )}
           </div>
+
+          {/* Per-app links: privacy / support / source */}
+          {(app.privacyPolicy || app.support || app.sourceUrl) && (
+            <div className="flex flex-wrap gap-2 pt-1 text-xs font-mono">
+              {app.privacyPolicy && (
+                <Link
+                  to={`/apps/${app.id}/privacy`}
+                  className="inline-flex items-center gap-1.5 text-[#1A1A1A] hover:text-[#E63946] border-2 border-[#1A1A1A] px-3 py-1.5 bg-white font-bold transition-colors"
+                >
+                  <ShieldCheck className="w-3.5 h-3.5" /> Privacy
+                </Link>
+              )}
+              {app.support && (
+                <Link
+                  to={`/apps/${app.id}/support`}
+                  className="inline-flex items-center gap-1.5 text-[#1A1A1A] hover:text-[#E63946] border-2 border-[#1A1A1A] px-3 py-1.5 bg-white font-bold transition-colors"
+                >
+                  <LifeBuoy className="w-3.5 h-3.5" /> Support
+                </Link>
+              )}
+              {app.sourceUrl && (
+                <a
+                  href={app.sourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-[#1A1A1A] hover:text-[#E63946] border-2 border-[#1A1A1A] px-3 py-1.5 bg-white font-bold transition-colors"
+                >
+                  <Github className="w-3.5 h-3.5" /> Source
+                </a>
+              )}
+            </div>
+          )}
         </div>
 
         {/* Right: screenshots gallery / coming-soon panel */}
@@ -193,12 +228,12 @@ function ScreenshotGallery({
         <span className="text-gray-500 font-bold">{activeIndex + 1} / {screenshots.length}</span>
       </div>
 
-      <div className="w-full bg-[#1A1A1A] border-4 border-[#1A1A1A] rounded-none overflow-hidden shadow-[6px_6px_0px_0px_rgba(26,26,26,1)]">
+      <div className="w-full bg-[#1A1A1A] border-4 border-[#1A1A1A] rounded-none overflow-hidden shadow-[6px_6px_0px_0px_rgba(26,26,26,1)] flex items-center justify-center min-h-[320px]">
         <img
           key={active.src}
           src={active.src}
           alt={active.alt}
-          className="w-full h-auto block"
+          className="block max-h-[640px] max-w-full w-auto h-auto object-contain"
         />
       </div>
 

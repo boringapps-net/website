@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
 import { APPS } from '../data/apps';
 import { CORPORATE_INFO } from '../data/legal';
-import { ShieldCheck, Scale, Globe, Mail } from 'lucide-react';
+import { ShieldCheck, Scale, User, Mail } from 'lucide-react';
 import { Logo } from './Logo';
 
 export function Footer() {
@@ -23,25 +23,20 @@ export function Footer() {
           </Link>
 
           <p className="text-xs text-gray-400 leading-relaxed max-w-sm">
-            We build unsexy (actually, beautiful, secure and blazing-fast) native utilities that run completely
-            on your local CPU. No unnecessary telemetry, no cloud subscriptions, no memory leaks. Just robust
-            software.
+            Native utilities for macOS, iOS, and Android. Run on-device, no cloud, no telemetry — boring
+            software that does one job and gets out of the way.
           </p>
 
           <div className="pt-2 text-[11px] text-gray-500 font-mono space-y-1 block border-t border-gray-800">
-            <span className="block font-bold text-gray-400">Joint Venture Corporate Registry:</span>
             <span className="block">
-              • {CORPORATE_INFO.partners[0].name} (ABN {CORPORATE_INFO.partners[0].abn})
-            </span>
-            <span className="block">
-              • {CORPORATE_INFO.partners[1].name} (ABN {CORPORATE_INFO.partners[1].abn})
+              A small project by {CORPORATE_INFO.partners[0].name} and {CORPORATE_INFO.partners[1].name}.
             </span>
           </div>
         </div>
 
         <div>
           <h4 className="text-xs uppercase font-mono tracking-wider text-white font-extrabold mb-4 border-b border-gray-800 pb-1">
-            Our Utility Suite
+            Apps
           </h4>
           <ul className="space-y-2.5 text-xs font-mono">
             {APPS.map((app) => (
@@ -61,16 +56,25 @@ export function Footer() {
 
         <div>
           <h4 className="text-xs uppercase font-mono tracking-wider text-white font-extrabold mb-4 border-b border-gray-800 pb-1 font-sans">
-            Regulatory Documents
+            Site
           </h4>
           <ul className="space-y-2.5 text-xs font-mono">
+            <li>
+              <Link
+                id="footer-nav-about"
+                to="/about"
+                className="hover:text-white flex items-center gap-1.5 transition text-left cursor-pointer"
+              >
+                <User className="w-3.5 h-3.5 text-gray-500" /> About
+              </Link>
+            </li>
             <li>
               <Link
                 id="footer-nav-privacy"
                 to="/privacy"
                 className="hover:text-white flex items-center gap-1.5 transition text-left cursor-pointer"
               >
-                <ShieldCheck className="w-3.5 h-3.5 text-gray-500" /> Australian Privacy Policy
+                <ShieldCheck className="w-3.5 h-3.5 text-gray-500" /> Privacy
               </Link>
             </li>
             <li>
@@ -79,34 +83,27 @@ export function Footer() {
                 to="/terms"
                 className="hover:text-white flex items-center gap-1.5 transition text-left cursor-pointer"
               >
-                <Scale className="w-3.5 h-3.5 text-gray-500" /> End User Terms & Licenses
+                <Scale className="w-3.5 h-3.5 text-gray-500" /> Terms
               </Link>
             </li>
-            <li>
-              <Link
-                id="footer-nav-about"
-                to="/about"
-                className="hover:text-white flex items-center gap-1.5 transition text-left cursor-pointer"
+            <li className="pt-2 border-t border-gray-800">
+              <a
+                href={`mailto:${CORPORATE_INFO.contactEmail}`}
+                className="hover:text-white flex items-center gap-1.5 transition text-[11px] text-gray-500"
               >
-                <Globe className="w-3.5 h-3.5 text-gray-500" /> About Joint-Venture (JV)
-              </Link>
-            </li>
-            <li className="pt-2 border-t border-gray-800 flex items-center gap-1.5 text-[11px] text-gray-500">
-              <Mail className="w-3.5 h-3.5 shrink-0" /> {CORPORATE_INFO.contactEmail}
+                <Mail className="w-3.5 h-3.5 shrink-0" /> {CORPORATE_INFO.contactEmail}
+              </a>
             </li>
           </ul>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-gray-500 font-mono">
-        <p>
-          &copy; {currentYear} {CORPORATE_INFO.jointVentureName}. All rights reserved strictly throughout
-          Australia.
-        </p>
+        <p>&copy; {currentYear} BoringApps.net. All rights reserved.</p>
         <div className="flex gap-4">
-          <span>Processed Fully Offline</span>
+          <span>On-device, offline-first</span>
           <span>•</span>
-          <span>Commonwealth Compliance Verified</span>
+          <span>No telemetry</span>
         </div>
       </div>
     </footer>

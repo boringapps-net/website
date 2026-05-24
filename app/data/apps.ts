@@ -63,4 +63,142 @@ export const APPS: AppMetadata[] = [
     pricing: 'TBA — TestFlight coming soon',
     systemRequirements: 'iOS 15+, Android 12+',
   },
+  {
+    id: 'sextant',
+    name: 'Sextant',
+    tagline: 'Kubernetes for iPhone and iPad.',
+    description:
+      'A native Kubernetes client for your phone. Browse pods, tail logs, exec in, manage Helm releases, port-forward — all over a direct device-to-cluster connection with no backend in between.',
+    extendedDescription:
+      "Sextant talks directly to your clusters' Kubernetes API servers from your phone. Browse every built-in resource and any CRD the cluster exposes, view Helm releases (values, manifests, revision history), tail container logs, exec into pods, open port-forwards and reach internal services in Safari. There is no Sextant cloud, no Sextant backend, no account to create — your phone is the kubectl. The full client source is published so you can verify exactly what it does on your device.",
+    features: [
+      'Browse pods, deployments, services, nodes, events, and any CRD your cluster exposes.',
+      'Tail container logs live; exec into a pod and run a shell.',
+      'Helm release management — values, rendered manifests, NOTES.txt, full revision history.',
+      'Port-forward to a pod or service and open the local endpoint in Safari.',
+      'Credentials live in the iOS Keychain (Android Keystore on Android) and never leave the device.',
+      'Built-in demo cluster — a fully-functional in-memory Kubernetes environment to try every feature before connecting your own.',
+      'iPad-optimised: permanent sidebar in landscape, drawer in portrait, full Liquid Glass on iOS 26.',
+      'Zero analytics, zero telemetry, zero crash reporters. Open source under FSL-1.1-MIT.',
+    ],
+    iconImage: '/apps/sextant/icon.png',
+    platforms: ['ios', 'android'],
+    status: 'coming-soon',
+    primaryColor: 'from-blue-500 to-indigo-600',
+    accentColor: 'text-blue-600',
+    bgColor: 'bg-blue-500/10',
+    borderColor: 'border-blue-500/20',
+    screenshots: [
+      { src: '/apps/sextant/screenshots/iphone/01-dashboard.png', alt: 'Cluster dashboard — your cluster at a glance' },
+      { src: '/apps/sextant/screenshots/iphone/02-pods-list.png', alt: 'Browse every pod, every resource, every CRD' },
+      { src: '/apps/sextant/screenshots/iphone/03-pod-detail.png', alt: 'Inspect a pod in detail — containers, conditions, restarts' },
+      { src: '/apps/sextant/screenshots/iphone/04-logs.png', alt: 'Stream container logs live from your phone' },
+      { src: '/apps/sextant/screenshots/iphone/05-helm-list.png', alt: 'Helm releases — values, manifests, history' },
+      { src: '/apps/sextant/screenshots/iphone/06-helm-detail.png', alt: 'Helm release detail with revision history and notes' },
+      { src: '/apps/sextant/screenshots/iphone/07-exec.png', alt: 'Exec straight into a running container' },
+      { src: '/apps/sextant/screenshots/iphone/08-drawer.png', alt: 'Switch clusters and namespaces from the sidebar' },
+    ],
+    sourceUrl: 'https://github.com/boringapps-net/sextant',
+    pricing: 'TBA — App Store submission imminent',
+    systemRequirements: 'iOS 16.4+, iPadOS 16.4+, Android 8+',
+    privacyPolicy: {
+      title: 'Sextant — Privacy Policy',
+      lastUpdated: 'May 24, 2026',
+      sections: [
+        {
+          heading: '1. Summary',
+          content: [
+            'Sextant ("the app", "we", "us") does not collect, transmit, or store any of your data on our servers. We do not have servers.',
+            'The app runs entirely on your device and connects only to the Kubernetes clusters that you explicitly configure. Your credentials never leave your device.',
+            'Sextant is published by The IT Dept Pty Ltd (ABN 12 665 405 505), a company registered in Australia, under the BoringApps project (boringapps.net).',
+          ],
+        },
+        {
+          heading: '2. What Sextant stores on your device',
+          content: [
+            '• Cluster connection metadata (cluster name, server URL, namespace selection, UI preferences) is stored in your device\'s standard app storage.',
+            '• Cluster credentials (bearer tokens, kubeconfig passwords, client certificates, custom CA bundles) are stored in the iOS Keychain (or Android Keystore on Android). These never leave your device.',
+            'All of this data is removed when you uninstall the app.',
+          ],
+        },
+        {
+          heading: '3. What Sextant sends over the network',
+          content: [
+            'When you interact with one of your configured clusters, Sextant makes HTTPS requests directly from your device to that cluster\'s Kubernetes API server. The URL, the authentication credentials, and the request payload are all defined by your cluster configuration — not by us. We never see, intercept, or proxy this traffic.',
+            'The app makes no other network requests. There are no analytics requests, no crash report uploads, no licence checks, no update pings.',
+          ],
+        },
+        {
+          heading: '4. What we do not do',
+          content: [
+            '• We do not collect personally identifiable information.',
+            '• We do not use analytics or telemetry SDKs of any kind.',
+            '• We do not use third-party crash reporters.',
+            '• We do not track you across apps or websites.',
+            '• We do not sell, share, or process any data.',
+            '• We do not have user accounts.',
+            '• We do not run any backend service that the app talks to.',
+          ],
+        },
+        {
+          heading: '5. Verifying these claims',
+          content:
+            'The Sextant source code is publicly available at github.com/boringapps-net/sextant under the Functional Source License (FSL-1.1-MIT). You — or anyone you trust to read code — can audit the entire app and verify that the statements in this policy are accurate. The README\'s "Why the source is here" section lists the specific files to look at.',
+        },
+        {
+          heading: '6. Children\'s privacy',
+          content:
+            'Sextant is a professional tool for software engineers and is not directed at children under 13. We do not knowingly collect any information from anyone.',
+        },
+        {
+          heading: '7. Third-party services',
+          content:
+            'Sextant does not integrate with any third-party services. The only network destinations the app communicates with are the Kubernetes API server URLs that you yourself enter into the cluster configuration.',
+        },
+        {
+          heading: '8. Changes to this policy',
+          content:
+            'If we materially change how the app handles data, this page will be updated and the "Last Updated" date above will change. Because Sextant doesn\'t collect or transmit data today, any change in that direction would be a substantive one and would be communicated in the app\'s release notes.',
+        },
+        {
+          heading: '9. Contact',
+          content: [
+            'If you have questions about this policy or the app\'s behaviour, please contact:',
+            'Nick Pratley — The IT Dept Pty Ltd',
+            'Email: hello@boringapps.net',
+            'Web: https://boringapps.net/apps/sextant',
+          ],
+        },
+      ],
+    },
+    support: {
+      intro:
+        "Sextant is built and maintained by The IT Dept Pty Ltd. The full source is published — most questions can be answered by reading the code, and bugs are tracked publicly on GitHub.",
+      contactEmail: 'hello@boringapps.net',
+      sourceUrl: 'https://github.com/boringapps-net/sextant',
+      sections: [
+        {
+          heading: 'Report a bug or request a feature',
+          content: [
+            'Open an issue on GitHub: github.com/boringapps-net/sextant/issues. Include the cluster type (GKE, EKS, AKS, k3s, kind, on-prem etc.), the Kubernetes server version, and a screenshot if the bug is visual.',
+            'For anything privacy- or security-sensitive — including suspected vulnerabilities — email hello@boringapps.net directly instead of filing a public issue.',
+          ],
+        },
+        {
+          heading: 'Common questions',
+          content: [
+            'Does Sextant store my credentials? — Bearer tokens, kubeconfig passwords, and client certificates are written to the iOS Keychain (Android Keystore on Android) and never leave your device. See src/lib/storage/clusters.ts in the public source.',
+            'Why won\'t my cluster connect? — Sextant connects directly from your phone to the API server URL you entered, so the server must be reachable from your device\'s network. Common causes: the API server is behind a VPN, the certificate chain isn\'t trusted (paste your custom CA into the cluster config), or the bearer token has expired. The error toast usually identifies which.',
+            'Does Sextant work with my managed Kubernetes? — Yes — GKE, EKS, AKS, OpenShift, k3s, kind, microk8s, Rancher, and any on-prem distribution that speaks the Kubernetes API. Authenticate with bearer tokens, basic auth, client certificates, or any kubeconfig you can paste in.',
+            'Can I try Sextant without exposing my cluster? — Yes. The built-in Demo Cluster is a fully-functional in-memory Kubernetes environment seeded with pods, deployments, services, events, and Helm releases. Tap "Use Demo Cluster" on the onboarding screen.',
+          ],
+        },
+        {
+          heading: 'Direct contact',
+          content:
+            'For licensing questions, partnership enquiries, or anything not covered above, email hello@boringapps.net.',
+        },
+      ],
+    },
+  },
 ];

@@ -14,14 +14,9 @@ export function Header() {
           className="flex items-center gap-3 group cursor-pointer text-left focus:outline-none"
         >
           <Logo className="w-10 h-10 border-2 border-[#1A1A1A] shadow-[2px_2px_0px_0px_rgba(26,26,26,0.3)] group-hover:shadow-[2px_2px_0px_0px_rgba(230,57,70,0.4)] group-hover:-translate-x-[1px] group-hover:-translate-y-[1px] transition-all duration-150" />
-          <div>
-            <h1 className="font-sans font-black text-xl tracking-tighter text-[#1A1A1A] leading-none">
-              BoringApps<span className="text-[#E63946]">.net</span>
-            </h1>
-            <span className="block text-[9px] font-mono text-gray-500 tracking-wider uppercase mt-1">
-              Pty Ltd Joint Venture
-            </span>
-          </div>
+          <h1 className="font-sans font-black text-xl tracking-tighter text-[#1A1A1A] leading-none">
+            BoringApps<span className="text-[#E63946]">.net</span>
+          </h1>
         </NavLink>
 
         <nav className="flex items-center gap-1 sm:gap-2 text-xs md:text-sm">
@@ -40,7 +35,7 @@ export function Header() {
           </NavLink>
 
           <NavLink
-            id="nav-about-jv"
+            id="nav-about"
             to="/about"
             className={({ isActive }) =>
               `px-3 py-2 border-2 font-bold font-sans transition cursor-pointer select-none rounded-none ${
@@ -50,7 +45,7 @@ export function Header() {
               }`
             }
           >
-            Joint Venture
+            About
           </NavLink>
 
           <div className="h-5 w-[2px] bg-[#1A1A1A] mx-2 hidden md:block" />
