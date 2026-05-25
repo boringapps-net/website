@@ -28,6 +28,9 @@ export interface AppMetadata {
   description: string;
   extendedDescription: string;
   features: string[];
+  /** Features publicly tracked as "coming next" before they ship — rendered
+   *  on the app detail page in its own section. Drop them as they land. */
+  plannedFeatures?: string[];
   iconImage: string;
   platforms: Platform[];
   status: AppStatus;

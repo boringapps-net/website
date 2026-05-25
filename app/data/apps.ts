@@ -38,6 +38,37 @@ export const APPS: AppMetadata[] = [
     systemRequirements: 'macOS 13.0 Ventura or later (Apple Silicon & Intel)',
   },
   {
+    id: 'whisply',
+    name: 'Whisply',
+    tagline: 'Local audio transcription, native and offline.',
+    description:
+      'A native macOS transcription app that turns audio and video into text on-device — drag a file in, get a clean transcript out. No cloud round-trip, no upload, no account.',
+    extendedDescription:
+      "Whisply runs OpenAI's Whisper model entirely on your Mac via whisper.cpp — every byte of audio stays on your device. Drag any .mp3, .wav, .m4a, .flac, .ogg, or video file onto the window and Whisply transcribes it locally; play back from any sentence with click-to-seek; export the result as plain text, Markdown with timestamps, or SRT subtitles. There's a built-in recorder for the microphone and a separate one for meeting audio (Zoom, Meet, Teams) via ScreenCaptureKit — useful when you want the transcript of a call without trusting anyone else with the recording.",
+    features: [
+      'On-device transcription via whisper.cpp — no cloud round-trip, no upload, no API key.',
+      'Drag-and-drop or Cmd+O to import; multi-file queue processes in order with cancel + per-file progress.',
+      'Built-in recorder: microphone, or system audio (Zoom / Google Meet / Teams) via ScreenCaptureKit.',
+      'Inline audio player with click-to-seek timestamps and the playing segment highlighted as you go.',
+      'Export to plain text, Markdown with timestamps, or SRT subtitles. Cmd+E from any transcript.',
+      'Video support too — drop a .mp4, .mov, .mkv, .avi, or .webm and Whisply pulls the audio out (ffmpeg helps if installed).',
+      'SwiftUI + SwiftData, signed for the Mac App Store sandbox. No accounts, no analytics, no telemetry.',
+    ],
+    plannedFeatures: [
+      'Speaker diarisation — automatically detect who said what and label segments with Speaker 1 / Speaker 2 / etc.',
+      'Per-speaker filtering — jump straight to one speaker\'s lines, or export a single speaker\'s transcript on its own.',
+    ],
+    iconImage: '/apps/whisply/icon.png',
+    platforms: ['mac'],
+    status: 'coming-soon',
+    primaryColor: 'from-amber-500 to-orange-600',
+    accentColor: 'text-amber-500',
+    bgColor: 'bg-amber-500/10',
+    borderColor: 'border-amber-500/20',
+    pricing: 'AU$14.99 once-off — on the Mac App Store',
+    systemRequirements: 'macOS 14 Sonoma or later (Apple Silicon & Intel)',
+  },
+  {
     id: 'repsense',
     name: 'Repsense',
     tagline: 'Coach-grade strength training, on your phone.',
