@@ -74,6 +74,106 @@ export const APPS: AppMetadata[] = [
     releaseDate: 'May 2026',
     currentVersion: '1.0.0',
     systemRequirements: 'iOS 16+, Android 12+',
+    privacyPolicy: {
+      title: 'Repsense — Privacy Policy',
+      lastUpdated: 'May 25, 2026',
+      sections: [
+        {
+          heading: '1. Summary',
+          content: [
+            'Repsense ("the app", "we", "us") does not collect, transmit, or store any of your data on our servers. We do not have servers.',
+            'The app runs entirely on your device. Workout history, bodyweight, settings, and exercise state are written to a local SQLite database that lives only on the device you installed the app on.',
+            'Repsense is published by The IT Dept Pty Ltd (ABN 12 665 405 505), a company registered in Australia, under the BoringApps project (boringapps.net).',
+          ],
+        },
+        {
+          heading: '2. What Repsense stores on your device',
+          content: [
+            '• Workout sessions, set logs, effort ratings, and progression history.',
+            '• Bodyweight entries you record.',
+            '• Profile settings: available equipment, plate increments, units (kg / lb), injuries.',
+            '• Exercise calibration state and per-role guide weights.',
+            'All of this lives in a single SQLite file (`repsense.db`) inside the app\'s private storage. It is removed when you uninstall the app.',
+          ],
+        },
+        {
+          heading: '3. What Repsense sends over the network',
+          content: [
+            'Nothing. The app makes no network requests at runtime. No accounts, no analytics, no telemetry, no crash reporters, no licence checks, no update pings.',
+            'If you choose to back up your device through the operating system\'s normal mechanisms (iCloud Backup on iOS, Google\'s app data backup on Android), your Repsense database may be included in that backup. That is between you and your OS vendor; we never see it.',
+          ],
+        },
+        {
+          heading: '4. What we do not do',
+          content: [
+            '• We do not collect personally identifiable information.',
+            '• We do not use analytics or telemetry SDKs of any kind.',
+            '• We do not use third-party crash reporters.',
+            '• We do not track you across apps or websites.',
+            '• We do not sell, share, or process any data.',
+            '• We do not have user accounts.',
+            '• We do not run any backend service that the app talks to.',
+          ],
+        },
+        {
+          heading: '5. App Store privacy declarations',
+          content:
+            'The "Privacy" section on Repsense\'s App Store and Google Play listings is set to "No data collected". The statements in this policy match those declarations. If you find a discrepancy, please email us — we want to know.',
+        },
+        {
+          heading: '6. Children\'s privacy',
+          content:
+            'Repsense is a strength training tool aimed at adult and adolescent lifters. It does not knowingly collect any information from anyone — children included — because it does not collect information at all.',
+        },
+        {
+          heading: '7. Third-party services',
+          content:
+            'Repsense does not integrate with any third-party services. There are no fitness-platform integrations, no social sharing, no leaderboards, no remote sync.',
+        },
+        {
+          heading: '8. Changes to this policy',
+          content:
+            'If we materially change how the app handles data, this page will be updated and the "Last updated" date above will change. Because Repsense doesn\'t collect or transmit data today, any change in that direction would be a substantive one and would be communicated in the app\'s release notes.',
+        },
+        {
+          heading: '9. Contact',
+          content: [
+            'If you have questions about this policy or the app\'s behaviour, please contact:',
+            'The IT Dept Pty Ltd',
+            'Email: hello@boringapps.net',
+            'Web: https://boringapps.net/apps/repsense',
+          ],
+        },
+      ],
+    },
+    support: {
+      intro:
+        'Repsense is built and maintained by The IT Dept Pty Ltd. It runs entirely on your device — there is no account to recover and no server to be down. Most things you might want to know are covered below; if not, email us.',
+      contactEmail: 'hello@boringapps.net',
+      sections: [
+        {
+          heading: 'Common questions',
+          content: [
+            'How does Repsense decide what I lift? — Onboarding asks for your available equipment, units, and any injuries. From there the engine picks exercises that fit your kit, suggests starting weights, and adapts each session based on how the last one felt (Easy / Controlled / Hard / Pain).',
+            'Where is my data stored? — In a single SQLite file inside the app\'s private storage on your device. It never leaves your phone or tablet. Uninstalling the app deletes the file.',
+            'Can I back it up? — Whatever your OS does for app data backups (iCloud Backup on iOS, Google\'s native app backup on Android) will include the Repsense database. There is no in-app export today; tell us if that matters to you.',
+            'Why is the app suggesting a deload? — Repsense triggers a deload when accumulated fatigue, RPE drift, and weekly volume against per-pattern ceilings all line up. It is your call whether to accept it — tap "Not Now" if you want to push through.',
+            'A new exercise is starting really light. Is that a bug? — No. New or reintroduced lifts go through a brief calibration: two clean exposures at moderate effort, then the app promotes them into the main programme with realistic loads.',
+            'What if my plates don\'t snap to 2.5 kg? — Settings → Weight Configuration lets you set the increment per equipment type (barbell, dumbbell, machine / cable). Micro-plate fans can drop it below the defaults.',
+          ],
+        },
+        {
+          heading: 'Report a bug or request a feature',
+          content:
+            'Email hello@boringapps.net with the device + iOS / Android version, the version of Repsense (Settings → About), and a description of what you saw vs what you expected. If you can include a screenshot of the moment the issue happened, even better. We read every message.',
+        },
+        {
+          heading: 'Direct contact',
+          content:
+            'For licensing questions, bulk-licence enquiries, partnership or press, or anything not covered above, email hello@boringapps.net.',
+        },
+      ],
+    },
   },
   {
     id: 'sextant',
