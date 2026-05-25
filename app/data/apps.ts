@@ -70,7 +70,7 @@ export const APPS: AppMetadata[] = [
       { src: '/apps/repsense/screenshots/iphone/07-settings.png', alt: 'Built around your kit — equipment, increments, constraints' },
     ],
     appStoreUrl: 'https://apps.apple.com/app/id6771250351',
-    pricing: 'AU$14.99 once-off — on the App Store',
+    pricing: 'AU$9.99 once-off — on the App Store',
     releaseDate: 'May 2026',
     currentVersion: '1.0.0',
     systemRequirements: 'iOS 16+, Android 12+',
