@@ -90,6 +90,24 @@ export function AppDetail({ app }: AppDetailProps) {
             </ul>
           </div>
 
+          {app.plannedFeatures && app.plannedFeatures.length > 0 && (
+            <div className="bg-amber-50 border-2 border-[#1A1A1A] rounded-none p-5 space-y-4 shadow-[3px_3px_0px_0px_rgba(26,26,26,1)]">
+              <h3 className="text-xs uppercase font-mono tracking-wider text-amber-900 font-extrabold flex items-center gap-2">
+                <Clock className="w-3.5 h-3.5" /> On the roadmap
+              </h3>
+              <ul className="space-y-3">
+                {app.plannedFeatures.map((feat) => (
+                  <li key={feat} className="flex gap-2.5 items-start text-xs text-gray-800">
+                    <span className="bg-white p-0.5 border border-amber-900 rounded-none text-amber-900 mt-0.5 shrink-0">
+                      <Clock className="w-3 h-3" />
+                    </span>
+                    <span className="leading-relaxed font-sans">{feat}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
           {/* CTAs */}
           <div className="space-y-3">
             {app.status === 'shipped' && app.appStoreUrl ? (

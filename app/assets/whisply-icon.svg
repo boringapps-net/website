@@ -1,0 +1,13 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Whisply">
+  <rect width="1024" height="1024" rx="220" fill="#0F172A"/>
+  <g fill="#F59E0B">
+    <rect x="160" y="448"  width="56" height="128" rx="28"/>
+    <rect x="248" y="376"  width="56" height="272" rx="28"/>
+    <rect x="336" y="288"  width="56" height="448" rx="28"/>
+    <rect x="424" y="208"  width="56" height="608" rx="28"/>
+    <rect x="512" y="288"  width="56" height="448" rx="28"/>
+    <rect x="600" y="376"  width="56" height="272" rx="28"/>
+    <rect x="688" y="448"  width="56" height="128" rx="28"/>
+    <rect x="776" y="416"  width="56" height="192" rx="28"/>
+  </g>
+</svg>
