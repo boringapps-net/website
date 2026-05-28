@@ -242,7 +242,7 @@ export const APPS: AppMetadata[] = [
       { src: '/apps/sextant/screenshots/iphone/08-drawer.png', alt: 'Switch clusters and namespaces from the sidebar' },
     ],
     sourceUrl: 'https://github.com/boringapps-net/sextant',
-    appStoreUrl: 'https://apps.apple.com/app/id6772725984',
+    appStoreUrl: 'https://apps.apple.com/au/app/sextant/id6772725984',
     pricing: 'AU$14.99 once-off — on the App Store',
     releaseDate: 'May 2026',
     currentVersion: '1.0.0',
