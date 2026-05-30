@@ -40,7 +40,7 @@ export const PRIVACY_POLICY: LegalDocument = {
       content: [
         'The short answer: nothing leaves your device unless an app explicitly tells you it will.',
         'For app-specific detail, see the privacy policy linked on each app\'s page. The summary for each currently-shipped app:',
-        '• Machole — records audio and video locally and saves to wherever you choose on your Mac. No network calls at runtime.',
+        '• ScreenHole — records audio and video locally and saves to wherever you choose on your Mac. No network calls at runtime.',
         '• Sextant — talks directly from your phone to the Kubernetes clusters you configure. Your credentials live in the iOS Keychain (or Android Keystore) and never leave the device. No analytics, telemetry, or crash reporters. Full source published.',
         '• Repsense — workout history is stored locally in an on-device SQLite database. No accounts, no sync, no analytics.',
       ],
