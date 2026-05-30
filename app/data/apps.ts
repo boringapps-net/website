@@ -2,13 +2,13 @@ import { AppMetadata } from '../types';
 
 export const APPS: AppMetadata[] = [
   {
-    id: 'machole',
-    name: 'Machole',
+    id: 'screenhole',
+    name: 'ScreenHole',
     tagline: 'Screen recorder with you in it.',
     description:
       'A persistent, always-on-top camera overlay and screen recorder for macOS — built for clean product demos.',
     extendedDescription:
-      "Machole records your screen with your face baked in. A small circular camera overlay floats above every other window, so when you record a tutorial, demo, or async update, viewers see what you're doing AND who's doing it — no post-production, no awkward picture-in-picture, no fighting with OBS. Capture a full display, a single window, or a drag-selected area, with microphone and system audio mixed in automatically.",
+      "ScreenHole records your screen with your face baked in. A small circular camera overlay floats above every other window, so when you record a tutorial, demo, or async update, viewers see what you're doing AND who's doing it — no post-production, no awkward picture-in-picture, no fighting with OBS. Capture a full display, a single window, or a drag-selected area, with microphone and system audio mixed in automatically.",
     features: [
       'Always-on circular camera overlay with five gradient themes and three sizes.',
       'Record a full screen, a single window, or a drag-selected area, with a 3-2-1 countdown.',
@@ -17,7 +17,7 @@ export const APPS: AppMetadata[] = [
       'Persistent controls panel with global shortcuts: ⌘⇧R record, ⌘⇧P pause, ⌘⇧M mute, ⌘⇧E camera.',
       'Zero accounts, zero analytics, zero telemetry — designed for the Mac App Store sandbox.',
     ],
-    iconImage: '/apps/machole/icon.png',
+    iconImage: '/apps/screenhole/icon.png',
     platforms: ['mac'],
     status: 'shipped',
     primaryColor: 'from-rose-500 to-pink-600',
@@ -25,10 +25,10 @@ export const APPS: AppMetadata[] = [
     bgColor: 'bg-rose-500/10',
     borderColor: 'border-rose-500/20',
     screenshots: [
-      { src: '/apps/machole/screenshots/01-hero.png', alt: 'Machole camera overlay floating above a Mac desktop' },
-      { src: '/apps/machole/screenshots/02-picker.png', alt: 'Source picker — screen, window, or custom area' },
-      { src: '/apps/machole/screenshots/03-controls.png', alt: 'Recording controls panel and timer' },
-      { src: '/apps/machole/screenshots/04-themes.png', alt: 'Five animated gradient themes for the camera ring' },
+      { src: '/apps/screenhole/screenshots/01-hero.png', alt: 'ScreenHole camera overlay floating above a Mac desktop' },
+      { src: '/apps/screenhole/screenshots/02-picker.png', alt: 'Source picker — screen, window, or custom area' },
+      { src: '/apps/screenhole/screenshots/03-controls.png', alt: 'Recording controls panel and timer' },
+      { src: '/apps/screenhole/screenshots/04-themes.png', alt: 'Five animated gradient themes for the camera ring' },
     ],
     appStoreUrl: 'https://apps.apple.com/app/id6770940835',
     websiteUrl: 'https://greenthread-ai.github.io/machole/',
