@@ -36,6 +36,117 @@ export const APPS: AppMetadata[] = [
     releaseDate: 'May 2026',
     currentVersion: '1.0.0',
     systemRequirements: 'macOS 13.0 Ventura or later (Apple Silicon & Intel)',
+    privacyPolicy: {
+      title: 'ScreenHole — Privacy Policy',
+      lastUpdated: 'May 31, 2026',
+      sections: [
+        {
+          heading: '1. Summary',
+          content: [
+            'ScreenHole ("the app", "we", "us") does not collect, transmit, or store any of your data on our servers. We do not have servers.',
+            'The app runs entirely on your Mac. Your camera, microphone, and screen are captured and processed locally; recordings are written only to the location you choose at save time.',
+            'ScreenHole is published by The IT Dept Pty Ltd (ABN 12 665 405 505), a company registered in Australia, under the BoringApps project (boringapps.net).',
+          ],
+        },
+        {
+          heading: '2. Camera',
+          content:
+            'ScreenHole accesses your camera to display your face in the on-screen overlay and, if you choose, include it in screen recordings. The camera feed — including any on-device background blur, auto-frame, or close-up processing — is handled entirely on your Mac. It is never transmitted off your device.',
+        },
+        {
+          heading: '3. Microphone',
+          content:
+            'ScreenHole accesses your microphone to capture audio for screen recordings and to drive the audio-reactive pulse on the overlay. Audio is processed entirely on your Mac. It is never transmitted off your device.',
+        },
+        {
+          heading: '4. Screen recording',
+          content:
+            'ScreenHole accesses your screen, application windows, or selected areas to record them. Recordings exist only in the location you choose when you save them. They are never transmitted off your Mac.',
+        },
+        {
+          heading: '5. Files you create',
+          content:
+            'Recordings written by ScreenHole live wherever you choose to save them. The app does not upload, copy, or share these files with any third party.',
+        },
+        {
+          heading: '6. What ScreenHole sends over the network',
+          content:
+            'Nothing. The app makes no network requests at runtime. There are no analytics requests, no crash report uploads, no licence checks, and no update pings.',
+        },
+        {
+          heading: '7. What we do not do',
+          content: [
+            '• We do not collect personally identifiable information.',
+            '• We do not use analytics or telemetry SDKs of any kind.',
+            '• We do not use third-party crash reporters.',
+            '• We do not track you across apps or websites.',
+            '• We do not sell, share, or process any data.',
+            '• We do not have user accounts or require sign-in.',
+            '• We do not run any backend service that the app talks to.',
+          ],
+        },
+        {
+          heading: '8. App Store privacy declarations',
+          content:
+            'The "Privacy" section on ScreenHole\'s Mac App Store listing is set to "No data collected". The statements in this policy match those declarations. If you find a discrepancy, please email us — we want to know.',
+        },
+        {
+          heading: '9. Children\'s privacy',
+          content:
+            'ScreenHole does not knowingly collect any information from anyone — children included — because it does not collect information at all.',
+        },
+        {
+          heading: '10. Changes to this policy',
+          content:
+            'If we materially change how the app handles data, this page will be updated and the "Last updated" date above will change. Because ScreenHole doesn\'t collect or transmit data today, any change in that direction would be a substantive one and would be communicated in the app\'s release notes.',
+        },
+        {
+          heading: '11. Contact',
+          content: [
+            'If you have questions about this policy or the app\'s behaviour, please contact:',
+            'The IT Dept Pty Ltd',
+            'Email: hello@boringapps.net',
+            'Web: https://boringapps.net/apps/screenhole',
+          ],
+        },
+      ],
+    },
+    support: {
+      intro:
+        'ScreenHole is built and maintained by The IT Dept Pty Ltd. It runs entirely on your Mac — there is no account to recover and no server to be down. Most things you might want to know are covered below; if not, email us.',
+      contactEmail: 'hello@boringapps.net',
+      sections: [
+        {
+          heading: 'Permissions & setup',
+          content: [
+            'ScreenHole needs three macOS permissions, granted under System Settings → Privacy & Security: Camera (for the overlay), Microphone (for recording audio and the pulse animation), and Screen Recording (to capture your screen).',
+            'After you enable Screen Recording, macOS requires ScreenHole to be restarted before the permission takes effect — the app will prompt you to do so.',
+            'All three are requested as they are first needed. ScreenHole only starts recording once the access it needs is granted.',
+          ],
+        },
+        {
+          heading: 'Common questions',
+          content: [
+            'Where are my recordings saved? — Wherever you choose in the Save dialog when a recording finishes. ScreenHole never uploads or copies them anywhere else.',
+            'Why does my face appear in the recording? — That\'s the point: the camera overlay is captured as part of the screen. The controls, picker, countdown, and area-select windows are content-protected, so they stay out of the recording — only your overlay and your chosen screen content are captured.',
+            'Can I record system audio? — Yes. ScreenHole mixes microphone and system audio into the recording; toggle system audio on or off in the controls before you start. (System-audio capture needs macOS 13 or later.)',
+            'What format are recordings? — An .mp4 (H.264) where macOS can encode it, falling back to .webm when it can\'t. If a system ffmpeg is installed, ScreenHole re-encodes the finished recording to a smaller .mp4; if ffmpeg is missing the original is saved unchanged, so a recording is never lost.',
+            'What are the keyboard shortcuts? — ⌘⇧R record, ⌘⇧P pause, ⌘⇧M mute, ⌘⇧E toggle camera.',
+            'Does anything leave my Mac? — No. Camera, microphone, and screen capture are all processed locally, and the app makes no network calls.',
+          ],
+        },
+        {
+          heading: 'Report a bug or request a feature',
+          content:
+            'Email hello@boringapps.net with your macOS version, the version of ScreenHole, and a description of what you saw vs what you expected. A screenshot of the moment the issue happened helps. We read every message.',
+        },
+        {
+          heading: 'Direct contact',
+          content:
+            'For licensing questions, bulk-licence enquiries, partnership or press, or anything not covered above, email hello@boringapps.net.',
+        },
+      ],
+    },
   },
   {
     id: 'whisply',
