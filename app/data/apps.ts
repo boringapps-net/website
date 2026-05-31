@@ -149,6 +149,131 @@ export const APPS: AppMetadata[] = [
     },
   },
   {
+    id: 'huedoku',
+    name: 'Huedoku',
+    tagline: 'Sudoku, in colour.',
+    description:
+      'A serene, colour-driven take on Sudoku for iPhone, iPad, and Mac. Place nine hand-picked pastel hues instead of digits — calm, tactile, and completely offline.',
+    extendedDescription:
+      "Huedoku replaces the digits 1–9 with nine soft pastel hues: fill every row, column, and 3×3 box with each hue exactly once. There are four difficulty tiers from Gentle to Deep, a positional notes mode for pencil-marking candidates, a difficulty-gated hint engine, unlimited undo, and gentle conflict detection. Finish a board and confetti of all nine hues rains down. An optional patterns overlay puts a distinct shape on each hue for colour-blind play. 400 puzzles ship bundled in the app, so it works entirely offline — and your in-progress game is always saved.",
+    features: [
+      'Colour-only gameplay — no numbers, ever. Nine pastel hues replace the digits.',
+      'Four difficulty tiers — Gentle, Calm, Focused, and Deep, each demanding harder deductions.',
+      'Notes mode — pencil-mark candidates in a positional 3×3 mini-grid inside each cell.',
+      'Hint engine + unlimited undo — fills the most logical next cell when you are stuck.',
+      'Conflict detection with strict / lenient / off modes, plus a gentle shake.',
+      'Patterns overlay puts a distinct shape on each hue for colour-blind support.',
+      '400 puzzles bundled for fully offline play; in-progress games auto-save.',
+    ],
+    iconImage: '/apps/huedoku/icon.png',
+    platforms: ['ios', 'mac'],
+    status: 'coming-soon',
+    primaryColor: 'from-violet-500 to-fuchsia-500',
+    accentColor: 'text-violet-500',
+    bgColor: 'bg-violet-500/10',
+    borderColor: 'border-violet-500/20',
+    pricing: 'AU$2.99 once-off — on the App Store',
+    systemRequirements: 'iOS 13.0+, iPadOS 13.0+, macOS 10.15 Catalina or later',
+    privacyPolicy: {
+      title: 'Huedoku — Privacy Policy',
+      lastUpdated: 'May 31, 2026',
+      sections: [
+        {
+          heading: '1. Summary',
+          content: [
+            'Huedoku ("the app", "we", "us") does not collect, transmit, or store any of your data on our servers. We do not have servers.',
+            'The app runs entirely on your device and makes no network requests at runtime. Your settings and game progress live only on the device you installed the app on.',
+            'Huedoku is published by Curiola Pty Ltd, a company registered in Australia, and listed on boringapps.net.',
+          ],
+        },
+        {
+          heading: '2. What Huedoku stores on your device',
+          content: [
+            '• Your settings (patterns, haptics, validation mode).',
+            '• Level completion progress and the single in-progress saved game.',
+            'All of this lives in a local SQLite database inside the app\'s private storage. It is removed when you uninstall the app, and can be wiped any time via Settings → Reset progress.',
+          ],
+        },
+        {
+          heading: '3. What Huedoku sends over the network',
+          content:
+            'Nothing. The app makes no network requests at runtime. The 400 puzzles ship bundled inside the app, so there is no download, no analytics, no crash reporting, no licence check, and no update ping.',
+        },
+        {
+          heading: '4. What we do not do',
+          content: [
+            '• We do not collect personally identifiable information.',
+            '• We do not use analytics or telemetry SDKs of any kind.',
+            '• We do not use third-party crash reporters.',
+            '• We do not track you across apps or websites.',
+            '• We do not sell, share, or process any data.',
+            '• We do not have user accounts or require sign-in.',
+            '• We do not run any backend service that the app talks to.',
+          ],
+        },
+        {
+          heading: '5. App Store privacy declarations',
+          content:
+            'The "Privacy" section on Huedoku\'s App Store listing is set to "No data collected". The statements in this policy match those declarations. If you find a discrepancy, please email us — we want to know.',
+        },
+        {
+          heading: '6. Children\'s privacy',
+          content:
+            'Huedoku is a calm puzzle game suitable for all ages. It does not knowingly collect any information from anyone — children included — because it does not collect information at all.',
+        },
+        {
+          heading: '7. Changes to this policy',
+          content:
+            'If we materially change how the app handles data, this page will be updated and the "Last updated" date above will change. Because Huedoku doesn\'t collect or transmit data today, any change in that direction would be a substantive one and would be communicated in the app\'s release notes.',
+        },
+        {
+          heading: '8. Contact',
+          content: [
+            'If you have questions about this policy or the app\'s behaviour, please contact:',
+            'Curiola Pty Ltd',
+            'Email: hello@boringapps.net',
+            'Web: https://boringapps.net/apps/huedoku',
+          ],
+        },
+      ],
+    },
+    support: {
+      intro:
+        'Huedoku is built and maintained by Curiola Pty Ltd. It runs entirely on your device — there is no account to recover and no server to be down. Most things you might want to know are covered below; if not, email us.',
+      contactEmail: 'hello@boringapps.net',
+      sections: [
+        {
+          heading: 'How to play',
+          content: [
+            'Each puzzle is a 9×9 grid. Instead of the numbers 1–9 you place nine pastel hues so that every row, every column, and every 3×3 box contains each hue exactly once.',
+            'Tap a cell, then tap a hue from the palette to place it. Long-press or use Notes mode to pencil-mark candidate hues in a mini 3×3 inside the cell; notes clear automatically when you place a hue.',
+            'Conflicts are flagged with a red ring and a gentle shake (you can set this to strict, lenient, or off in Settings). Stuck? The hint button fills the most logical next cell.',
+          ],
+        },
+        {
+          heading: 'Common questions',
+          content: [
+            'I\'m colour-blind — can I still play? — Yes. Turn on Settings → Patterns to draw a distinct shape (stripe, dot, ring, chevron…) on each hue so they\'re distinguishable without relying on colour.',
+            'Where is my progress stored? — In a local database inside the app\'s private storage on your device. It never leaves your device, and uninstalling the app removes it.',
+            'How do I start over? — Settings → Reset progress deletes all completed levels and the saved game (with a confirmation first).',
+            'What are the difficulty tiers? — Gentle, Calm, Focused, and Deep. Each tier gives fewer starting clues and requires progressively harder solving techniques.',
+            'Does Huedoku need the internet? — No. All 400 puzzles ship inside the app; it works fully offline and makes no network calls.',
+          ],
+        },
+        {
+          heading: 'Report a bug or request a feature',
+          content:
+            'Email hello@boringapps.net with your device, OS version, and a description of what you saw vs what you expected. A screenshot helps. We read every message.',
+        },
+        {
+          heading: 'Direct contact',
+          content:
+            'For anything not covered above, email hello@boringapps.net.',
+        },
+      ],
+    },
+  },
+  {
     id: 'whisply',
     name: 'Whisply',
     tagline: 'Local audio transcription, native and offline.',
