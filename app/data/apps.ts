@@ -45,7 +45,7 @@ export const APPS: AppMetadata[] = [
           content: [
             'ScreenHole ("the app", "we", "us") does not collect, transmit, or store any of your data on our servers. We do not have servers.',
             'The app runs entirely on your Mac. Your camera, microphone, and screen are captured and processed locally; recordings are written only to the location you choose at save time.',
-            'ScreenHole is published by The IT Dept Pty Ltd (ABN 12 665 405 505), a company registered in Australia, under the BoringApps project (boringapps.net).',
+            'ScreenHole is published by Curiola Pty Ltd, a company registered in Australia, and listed on boringapps.net.',
           ],
         },
         {
@@ -104,7 +104,7 @@ export const APPS: AppMetadata[] = [
           heading: '11. Contact',
           content: [
             'If you have questions about this policy or the app\'s behaviour, please contact:',
-            'The IT Dept Pty Ltd',
+            'Curiola Pty Ltd',
             'Email: hello@boringapps.net',
             'Web: https://boringapps.net/apps/screenhole',
           ],
@@ -113,7 +113,7 @@ export const APPS: AppMetadata[] = [
     },
     support: {
       intro:
-        'ScreenHole is built and maintained by The IT Dept Pty Ltd. It runs entirely on your Mac — there is no account to recover and no server to be down. Most things you might want to know are covered below; if not, email us.',
+        'ScreenHole is built and maintained by Curiola Pty Ltd. It runs entirely on your Mac — there is no account to recover and no server to be down. Most things you might want to know are covered below; if not, email us.',
       contactEmail: 'hello@boringapps.net',
       sections: [
         {
