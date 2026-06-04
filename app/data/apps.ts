@@ -155,7 +155,7 @@ export const APPS: AppMetadata[] = [
     description:
       'A serene, colour-driven take on Sudoku for iPhone, iPad, and Mac. Place nine hand-picked pastel hues instead of digits — calm, tactile, and completely offline.',
     extendedDescription:
-      "Huedoku replaces the digits 1–9 with nine soft pastel hues: fill every row, column, and 3×3 box with each hue exactly once. There are four difficulty tiers from Gentle to Deep, a positional notes mode for pencil-marking candidates, a difficulty-gated hint engine, unlimited undo, and gentle conflict detection. Finish a board and confetti of all nine hues rains down. An optional patterns overlay puts a distinct shape on each hue for colour-blind play. 400 puzzles ship bundled in the app, so it works entirely offline — and your in-progress game is always saved.",
+      "Huedoku replaces the digits 1–9 with nine soft pastel hues: fill every row, column, and 3×3 box with each hue exactly once. There are four difficulty tiers from Gentle to Deep, a positional notes mode for pencil-marking candidates, a difficulty-gated hint engine, unlimited undo, and gentle conflict detection. Finish a board and confetti of all nine hues rains down. An optional patterns overlay puts a distinct shape on each hue for colour-blind play. 400 puzzles ship bundled in the app, so it works entirely offline — and your in-progress game is always saved. Gentle and Calm are free to play; a single one-off purchase unlocks Focused and Deep — a support-the-devs deal with no ads and no subscriptions.",
     features: [
       'Colour-only gameplay — no numbers, ever. Nine pastel hues replace the digits.',
       'Four difficulty tiers — Gentle, Calm, Focused, and Deep, each demanding harder deductions.',
@@ -172,17 +172,17 @@ export const APPS: AppMetadata[] = [
     accentColor: 'text-violet-500',
     bgColor: 'bg-violet-500/10',
     borderColor: 'border-violet-500/20',
-    pricing: 'AU$2.99 once-off — on the App Store',
+    pricing: 'Free — one-off AU$2.99 unlock for the full game',
     systemRequirements: 'iOS 13.0+, iPadOS 13.0+, macOS 10.15 Catalina or later',
     privacyPolicy: {
       title: 'Huedoku — Privacy Policy',
-      lastUpdated: 'May 31, 2026',
+      lastUpdated: 'June 4, 2026',
       sections: [
         {
           heading: '1. Summary',
           content: [
             'Huedoku ("the app", "we", "us") does not collect, transmit, or store any of your data on our servers. We do not have servers.',
-            'The app runs entirely on your device and makes no network requests at runtime. Your settings and game progress live only on the device you installed the app on.',
+            'The app runs entirely on your device and makes no network requests at runtime, other than the in-app-purchase requests handled by the App Store. Your settings and game progress live only on the device you installed the app on.',
             'Huedoku is published by Curiola Pty Ltd, a company registered in Australia, and listed on boringapps.net.',
           ],
         },
@@ -191,16 +191,24 @@ export const APPS: AppMetadata[] = [
           content: [
             '• Your settings (patterns, haptics, validation mode).',
             '• Level completion progress and the single in-progress saved game.',
+            '• A local flag recording whether you have unlocked the full game.',
             'All of this lives in a local SQLite database inside the app\'s private storage. It is removed when you uninstall the app, and can be wiped any time via Settings → Reset progress.',
           ],
         },
         {
-          heading: '3. What Huedoku sends over the network',
-          content:
-            'Nothing. The app makes no network requests at runtime. The 400 puzzles ship bundled inside the app, so there is no download, no analytics, no crash reporting, no licence check, and no update ping.',
+          heading: '3. In-app purchase',
+          content: [
+            'Huedoku is a free download with the Gentle and Calm tiers unlocked. A single one-off purchase ("Full Game") unlocks the Focused and Deep tiers permanently.',
+            'Purchases are processed entirely by Apple\'s App Store. We never see or receive your payment details. The app only stores a local flag indicating the unlock was purchased, and asks the App Store to restore it when you tap "Restore purchases".',
+          ],
         },
         {
-          heading: '4. What we do not do',
+          heading: '4. What Huedoku sends over the network',
+          content:
+            'Nothing beyond the purchase and restore requests handled by the App Store frameworks. All 400 puzzles ship bundled inside the app, so there is no download, no analytics, no crash reporting, and no update ping.',
+        },
+        {
+          heading: '5. What we do not do',
           content: [
             '• We do not collect personally identifiable information.',
             '• We do not use analytics or telemetry SDKs of any kind.',
@@ -208,26 +216,26 @@ export const APPS: AppMetadata[] = [
             '• We do not track you across apps or websites.',
             '• We do not sell, share, or process any data.',
             '• We do not have user accounts or require sign-in.',
-            '• We do not run any backend service that the app talks to.',
+            '• We do not run any backend service that the app talks to (purchases go directly to the App Store).',
           ],
         },
         {
-          heading: '5. App Store privacy declarations',
+          heading: '6. App Store privacy declarations',
           content:
             'The "Privacy" section on Huedoku\'s App Store listing is set to "No data collected". The statements in this policy match those declarations. If you find a discrepancy, please email us — we want to know.',
         },
         {
-          heading: '6. Children\'s privacy',
+          heading: '7. Children\'s privacy',
           content:
             'Huedoku is a calm puzzle game suitable for all ages. It does not knowingly collect any information from anyone — children included — because it does not collect information at all.',
         },
         {
-          heading: '7. Changes to this policy',
+          heading: '8. Changes to this policy',
           content:
             'If we materially change how the app handles data, this page will be updated and the "Last updated" date above will change. Because Huedoku doesn\'t collect or transmit data today, any change in that direction would be a substantive one and would be communicated in the app\'s release notes.',
         },
         {
-          heading: '8. Contact',
+          heading: '9. Contact',
           content: [
             'If you have questions about this policy or the app\'s behaviour, please contact:',
             'Curiola Pty Ltd',
@@ -257,7 +265,9 @@ export const APPS: AppMetadata[] = [
             'Where is my progress stored? — In a local database inside the app\'s private storage on your device. It never leaves your device, and uninstalling the app removes it.',
             'How do I start over? — Settings → Reset progress deletes all completed levels and the saved game (with a confirmation first).',
             'What are the difficulty tiers? — Gentle, Calm, Focused, and Deep. Each tier gives fewer starting clues and requires progressively harder solving techniques.',
-            'Does Huedoku need the internet? — No. All 400 puzzles ship inside the app; it works fully offline and makes no network calls.',
+            'Which tiers are free? — Gentle and Calm are free to play. A single one-off "Full Game" purchase unlocks Focused and Deep permanently.',
+            'I bought the unlock on another device — how do I get it here? — Open Settings and tap "Restore purchases".',
+            'Does Huedoku need the internet? — No. All 400 puzzles ship inside the app; it works fully offline and makes no network calls beyond the App Store purchase and restore.',
           ],
         },
         {
