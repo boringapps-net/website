@@ -274,6 +274,146 @@ export const APPS: AppMetadata[] = [
     },
   },
   {
+    id: 'pastel-pathways',
+    name: 'Pastel Pathways',
+    tagline: 'Connect the colours.',
+    description:
+      'A calm, colour-led path puzzle for iPhone, iPad, and Android. Draw a path between each pair of pastel nodes and fill the grid — quiet, tactile logic, completely offline.',
+    extendedDescription:
+      "Pastel Pathways is the sister game to Huedoku. Each level scatters pairs of pastel nodes on a grid; drag from one to its match to draw a path between them, and a level is solved when every pair is connected and every square is filled. Editing is forgiving — cross your own path to trim it, and run into another colour and it politely steps aside. 160 hand-built levels span eight packs, with grids growing gently from a cosy 4×4 up to a meaty 12×12. Each colour also carries a distinct symbol, so the board stays readable for colour-blind players. The first three packs are free; a single one-off purchase unlocks everything. It runs entirely offline and saves your progress automatically.",
+    features: [
+      'Drag-to-draw paths — orthogonal connections, no diagonals, with forgiving undo-as-you-go editing.',
+      'Fill the whole board — a level is solved when every pair connects and every square is filled.',
+      '160 hand-built levels across 8 packs, with grids growing from 4×4 up to 12×12.',
+      'Symbol overlays put a distinct shape on each colour for colour-blind play.',
+      'Gentle haptics and calm animations; a quiet confetti celebration on every solve.',
+      'First three packs free; a single one-off purchase unlocks all 8 packs forever.',
+      'Fully offline — no accounts, no ads, no tracking; progress auto-saves.',
+    ],
+    iconImage: '/apps/pastel-pathways/icon.png',
+    platforms: ['ios', 'android'],
+    status: 'coming-soon',
+    primaryColor: 'from-emerald-400 to-indigo-400',
+    accentColor: 'text-emerald-500',
+    bgColor: 'bg-emerald-500/10',
+    borderColor: 'border-emerald-500/20',
+    screenshots: [
+      { src: '/apps/pastel-pathways/screenshots/iphone/01-start.png', alt: 'Pastel Pathways start screen' },
+      { src: '/apps/pastel-pathways/screenshots/iphone/02-play.png', alt: 'Drawing colour paths mid-solve' },
+      { src: '/apps/pastel-pathways/screenshots/iphone/03-solved.png', alt: 'A solved level with a confetti celebration' },
+      { src: '/apps/pastel-pathways/screenshots/iphone/04-packs.png', alt: 'Level packs with completion ticks and the full-game unlock' },
+      { src: '/apps/pastel-pathways/screenshots/iphone/05-symbols.png', alt: 'Symbol overlays for colour-blind play' },
+    ],
+    pricing: 'Free — one-off AU$2.99 unlock for the full game',
+    systemRequirements: 'iOS 13.0+, iPadOS 13.0+, Android 8.0 or later',
+    privacyPolicy: {
+      title: 'Pastel Pathways — Privacy Policy',
+      lastUpdated: 'June 4, 2026',
+      sections: [
+        {
+          heading: '1. Summary',
+          content: [
+            'Pastel Pathways ("the app", "we", "us") does not collect, transmit, or store any of your data on our servers. We do not have servers.',
+            'The app runs entirely on your device and makes no network requests at runtime. Your settings, progress, and purchase state live only on the device you installed the app on.',
+            'Pastel Pathways is published by Curiola Pty Ltd, a company registered in Australia, and listed on boringapps.net.',
+          ],
+        },
+        {
+          heading: '2. What Pastel Pathways stores on your device',
+          content: [
+            '• Your settings (haptics, symbol overlays).',
+            '• Level completion progress and the in-progress saved game.',
+            '• A local flag recording whether you have unlocked the full game.',
+            'All of this lives in a local SQLite database inside the app\'s private storage. It is removed when you uninstall the app.',
+          ],
+        },
+        {
+          heading: '3. In-app purchase',
+          content: [
+            'Pastel Pathways is a free download with the first three packs unlocked. A single one-off purchase ("Full Game") unlocks the remaining packs permanently.',
+            'Purchases are processed entirely by Apple\'s App Store or Google Play. We never see or receive your payment details. The app only stores a local flag indicating the unlock was purchased, and asks the store to restore it when you tap "Restore purchases".',
+          ],
+        },
+        {
+          heading: '4. What Pastel Pathways sends over the network',
+          content:
+            'Nothing beyond the purchase and restore requests handled by the App Store and Google Play frameworks. All 160 levels ship bundled inside the app, so there is no download, no analytics, no crash reporting, and no update ping.',
+        },
+        {
+          heading: '5. What we do not do',
+          content: [
+            '• We do not collect personally identifiable information.',
+            '• We do not use analytics or telemetry SDKs of any kind.',
+            '• We do not use third-party crash reporters.',
+            '• We do not track you across apps or websites.',
+            '• We do not sell, share, or process any data.',
+            '• We do not have user accounts or require sign-in.',
+            '• We do not run any backend service that the app talks to (purchases go directly to the platform store).',
+          ],
+        },
+        {
+          heading: '6. Store privacy declarations',
+          content:
+            'The privacy sections on the App Store and Google Play listings are set to "No data collected". The statements in this policy match those declarations. If you find a discrepancy, please email us — we want to know.',
+        },
+        {
+          heading: '7. Children\'s privacy',
+          content:
+            'Pastel Pathways is a calm puzzle game suitable for all ages. It does not knowingly collect any information from anyone — children included — because it does not collect information at all.',
+        },
+        {
+          heading: '8. Changes to this policy',
+          content:
+            'If we materially change how the app handles data, this page will be updated and the "Last updated" date above will change.',
+        },
+        {
+          heading: '9. Contact',
+          content: [
+            'If you have questions about this policy or the app\'s behaviour, please contact:',
+            'Curiola Pty Ltd',
+            'Email: hello@boringapps.net',
+            'Web: https://boringapps.net/apps/pastel-pathways',
+          ],
+        },
+      ],
+    },
+    support: {
+      intro:
+        'Pastel Pathways is built and maintained by Curiola Pty Ltd. It runs entirely on your device — there is no account to recover and no server to be down. Most things you might want to know are covered below; if not, email us.',
+      contactEmail: 'hello@boringapps.net',
+      sections: [
+        {
+          heading: 'How to play',
+          content: [
+            'Each level is a grid with pairs of coloured nodes. Drag from one node to its matching node to draw a path between them — paths move orthogonally, with no diagonals.',
+            'A level is solved when every pair is connected and every square on the board is filled. Drag back over your own path to trim it, and if you cross another colour\'s path it gives way so you can redraw.',
+            'Tap the reset button to clear the board and start the level fresh.',
+          ],
+        },
+        {
+          heading: 'Common questions',
+          content: [
+            'I\'m colour-blind — can I still play? — Yes. Each colour shows a distinct symbol on its nodes, and Settings → Symbol overlays adds the same shapes along the paths, so colour is never the only cue.',
+            'Which packs are free? — The first three packs are free to play. A single one-off "Full Game" purchase unlocks the remaining packs permanently.',
+            'I bought the unlock on another device — how do I get it here? — Open Settings and tap "Restore purchases".',
+            'Where is my progress stored? — In a local database inside the app\'s private storage. It never leaves your device, and uninstalling the app removes it.',
+            'Does Pastel Pathways need the internet? — No. All 160 levels ship inside the app; it works fully offline and makes no network calls beyond the store purchase and restore.',
+          ],
+        },
+        {
+          heading: 'Report a bug or request a feature',
+          content:
+            'Email hello@boringapps.net with your device, OS version, and a description of what you saw vs what you expected. A screenshot helps. We read every message.',
+        },
+        {
+          heading: 'Direct contact',
+          content:
+            'For anything not covered above, email hello@boringapps.net.',
+        },
+      ],
+    },
+  },
+  {
     id: 'whisply',
     name: 'Whisply',
     tagline: 'Local audio transcription, native and offline.',
