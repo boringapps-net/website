@@ -424,6 +424,140 @@ export const APPS: AppMetadata[] = [
     },
   },
   {
+    id: 'scooch',
+    name: 'Make Room',
+    tagline: 'Slide the blocks. Free the one.',
+    description:
+      'A calm sliding-block puzzle for iPhone and Android. One block is boxed in — slide the others aside until it can slip out the gap. 350 hand-verified puzzles, completely offline.',
+    extendedDescription:
+      "Make Room is the honest take on the sliding-block puzzle. One warm hero block is trapped behind the others; slide blocks along their lanes until the hero has a clear run to the exit. The whole game is built on one promise: every single board is proven solvable — with a known best solution — by a solver before it ships, so you'll never get stuck on a level that can't be done, only one you haven't cracked yet. 350 puzzles span 14 packs that tighten slowly, from a two-move warm-up on a cosy 6×6 up to eight-by-eight gridlock. There's a move counter and an optimal-par badge for the perfectionists, unlimited undo, and a one-tap hint that plays a best next move when you're truly stuck. The first two packs are free; a single one-off purchase unlocks the rest — no ads, no timers, no lives, no subscriptions, no tracking. It runs entirely on your device and saves as you go.",
+    features: [
+      'Drag-to-slide blocks — they follow your finger and snap into place; one trapped hero block to free.',
+      'Every one of the 350 levels is solver-verified: provably solvable, with an exact optimal par.',
+      '14 packs that get harder slowly — grids grow from 6×6 to 8×8 as the jams tighten.',
+      'Move counter, optimal-solve badge, unlimited undo, and a solver-backed hint when you’re stuck.',
+      'Colour-blind friendly — the hero always shows an arrow to the exit, with an optional grain texture for orientation.',
+      'First two packs free; a single one-off purchase unlocks all 14 packs forever.',
+      'Fully offline — no accounts, no ads, no tracking; progress auto-saves.',
+    ],
+    iconImage: '/apps/scooch/icon.png',
+    platforms: ['ios', 'android'],
+    status: 'coming-soon',
+    primaryColor: 'from-orange-500 to-rose-500',
+    accentColor: 'text-orange-600',
+    bgColor: 'bg-orange-500/10',
+    borderColor: 'border-orange-500/20',
+    pricing: 'Free — one-off AU$2.99 unlock for the full game',
+    systemRequirements: 'iOS 13.0+, iPadOS 13.0+, Android 8.0 or later',
+    privacyPolicy: {
+      title: 'Make Room — Privacy Policy',
+      lastUpdated: 'June 4, 2026',
+      sections: [
+        {
+          heading: '1. Summary',
+          content: [
+            'Make Room ("the app", "we", "us") does not collect, transmit, or store any of your data on our servers. We do not have servers.',
+            'The app runs entirely on your device and makes no network requests at runtime, other than the in-app-purchase requests handled by the App Store and Google Play. Your settings and progress live only on the device you installed the app on.',
+            'Make Room is published by The IT Dept Pty Ltd (ABN 12 665 405 505), a company registered in Australia, under the BoringApps project (boringapps.net).',
+          ],
+        },
+        {
+          heading: '2. What Make Room stores on your device',
+          content: [
+            '• Your settings (vibration, block-grain overlay).',
+            '• Level completion progress (including your best move count) and the single in-progress saved game.',
+            '• A local flag recording whether you have unlocked the full game.',
+            'All of this lives in a local SQLite database inside the app\'s private storage. It is removed when you uninstall the app, and can be wiped any time via Settings → Reset progress.',
+          ],
+        },
+        {
+          heading: '3. In-app purchase',
+          content: [
+            'Make Room is a free download with the first two packs unlocked. A single one-off purchase ("Full Game") unlocks the remaining packs permanently.',
+            'Purchases are processed entirely by Apple\'s App Store or Google Play. We never see or receive your payment details. The app only stores a local flag indicating the unlock was purchased, and asks the store to restore it when you tap "Restore purchases".',
+          ],
+        },
+        {
+          heading: '4. What Make Room sends over the network',
+          content:
+            'Nothing beyond the purchase and restore requests handled by the App Store and Google Play frameworks. All 350 puzzles ship bundled inside the app, so there is no download, no analytics, no crash reporting, and no update ping.',
+        },
+        {
+          heading: '5. What we do not do',
+          content: [
+            '• We do not collect personally identifiable information.',
+            '• We do not use analytics or telemetry SDKs of any kind.',
+            '• We do not use third-party crash reporters.',
+            '• We do not track you across apps or websites.',
+            '• We do not sell, share, or process any data.',
+            '• We do not have user accounts or require sign-in.',
+            '• We do not run any backend service that the app talks to (purchases go directly to the platform store).',
+          ],
+        },
+        {
+          heading: '6. Store privacy declarations',
+          content:
+            'The privacy sections on the App Store and Google Play listings are set to "No data collected". The statements in this policy match those declarations. If you find a discrepancy, please email us — we want to know.',
+        },
+        {
+          heading: '7. Children\'s privacy',
+          content:
+            'Make Room is a calm puzzle game suitable for all ages. It does not knowingly collect any information from anyone — children included — because it does not collect information at all.',
+        },
+        {
+          heading: '8. Changes to this policy',
+          content:
+            'If we materially change how the app handles data, this page will be updated and the "Last updated" date above will change.',
+        },
+        {
+          heading: '9. Contact',
+          content: [
+            'If you have questions about this policy or the app\'s behaviour, please contact:',
+            'The IT Dept Pty Ltd',
+            'Email: hello@boringapps.net',
+            'Web: https://boringapps.net/apps/scooch',
+          ],
+        },
+      ],
+    },
+    support: {
+      intro:
+        'Make Room is built and maintained by The IT Dept Pty Ltd. It runs entirely on your device — there is no account to recover and no server to be down. Most things you might want to know are covered below; if not, email us.',
+      contactEmail: 'hello@boringapps.net',
+      sections: [
+        {
+          heading: 'How to play',
+          content: [
+            'Each board has one warm hero block and a grid of other blocks. Blocks slide only along their own lane — horizontal blocks left and right, vertical blocks up and down — and can\'t pass through one another.',
+            'Drag blocks aside to clear a path, then slide the hero off the right edge through the exit gap to win. The move counter tracks your moves; "par" is the fewest moves possible. Solve at par for an "Optimal" badge.',
+            'Stuck? Undo as many times as you like, reset the board, or tap the hint to play one good move.',
+          ],
+        },
+        {
+          heading: 'Common questions',
+          content: [
+            'Are the puzzles always solvable? — Yes, guaranteed. Every level is checked by a solver before it ships: it is proven solvable and its "par" is the true minimum number of moves. You can always finish a level — it\'s only ever your route that needs work.',
+            'I\'m colour-blind — can I still play? — Yes. The hero block always shows an arrow pointing to the exit, so the goal never depends on colour. Turn on Settings → Block grain to add a directional texture to every block so its orientation is clear too.',
+            'Which packs are free? — The first two packs (Loosen and Shuffle) are free to play. A single one-off "Full Game" purchase unlocks the remaining twelve packs permanently.',
+            'I bought the unlock on another device — how do I get it here? — Open Settings and tap "Restore purchases".',
+            'Where is my progress stored? — In a local database inside the app\'s private storage on your device. It never leaves your device, and uninstalling the app removes it.',
+            'Does Make Room need the internet? — No. All 350 puzzles ship inside the app; it works fully offline and makes no network calls beyond the store purchase and restore.',
+          ],
+        },
+        {
+          heading: 'Report a bug or request a feature',
+          content:
+            'Email hello@boringapps.net with your device, OS version, and a description of what you saw vs what you expected. A screenshot helps. We read every message.',
+        },
+        {
+          heading: 'Direct contact',
+          content:
+            'For anything not covered above, email hello@boringapps.net.',
+        },
+      ],
+    },
+  },
+  {
     id: 'whisply',
     name: 'Whisply',
     tagline: 'Local audio transcription, native and offline.',
