@@ -173,6 +173,14 @@ export const APPS: AppMetadata[] = [
     accentColor: 'text-amber-600',
     bgColor: 'bg-amber-400/10',
     borderColor: 'border-amber-400/20',
+    screenshots: [
+      { src: '/apps/cueup/screenshots/iphone/01-studio.png', alt: 'The Studio: teleprompter by the lens, cue cards and the record button' },
+      { src: '/apps/cueup/screenshots/iphone/02-script.png', alt: 'Writing a script in beats with plain Markdown' },
+      { src: '/apps/cueup/screenshots/iphone/03-beats.png', alt: 'Beats with their takes, ready to retake any one' },
+      { src: '/apps/cueup/screenshots/iphone/04-review.png', alt: 'Review: every beat in order, with Play all' },
+      { src: '/apps/cueup/screenshots/iphone/05-framing.png', alt: 'Per-beat framing and a punch-in on a take' },
+      { src: '/apps/cueup/screenshots/iphone/06-export.png', alt: 'Exporting a 1080×1920 portrait MP4' },
+    ],
     pricing: 'Free — one-off AU$2.99 unlock removes the export watermark',
     systemRequirements: 'iOS 15.0+ (iPhone), Android 7.0 or later',
     privacyPolicy: {
