@@ -34,7 +34,7 @@ export const APPS: AppMetadata[] = [
     websiteUrl: 'https://greenthread-ai.github.io/machole/',
     pricing: '$29.99 once-off — lifetime license on the Mac App Store',
     releaseDate: 'May 2026',
-    currentVersion: '1.0.0',
+    currentVersion: '1.2.0',
     systemRequirements: 'macOS 13.0 Ventura or later (Apple Silicon & Intel)',
     privacyPolicy: {
       title: 'ScreenHole — Privacy Policy',
@@ -149,11 +149,165 @@ export const APPS: AppMetadata[] = [
     },
   },
   {
+    id: 'cueup',
+    name: 'CueUp',
+    tagline: 'Script. Shoot. Done.',
+    description:
+      'A beat-by-beat video studio for your phone. Write a script, read it from a teleprompter by the lens, fire on-screen cues as you talk, retake any single beat, and export a finished portrait video.',
+    extendedDescription:
+      "CueUp is for people who talk to camera. Write or paste your script in plain Markdown — every ## heading is a beat you record on its own. In the Studio the teleprompter scrolls right under the selfie lens, so your eyes stay on the viewer, and the controls sit below the frame where they can never end up in the shot. Tap Next cue mid-take to pop up a call-to-action card, a lower-third with your name, or a full-screen chart, exactly when you say it. Fluffed a line? Retake just that beat; every other beat stays exactly as it was. Set framing and punch-ins per beat to hide the jumps between takes, review the assembled cut, and export a 1080×1920 MP4 ready for Shorts, Reels or TikTok. There's no account, no cloud, no AI and no speech recognition: your scripts and recordings never leave the phone unless you share the finished video. CueUp is free to use in full; exports from the free version carry a small \"Made with CueUp\" mark, and a single one-off purchase removes it for good.",
+    features: [
+      'Write in beats: plain Markdown, where each ## heading is one beat you record on its own.',
+      'Teleprompter right by the selfie lens, with adjustable speed, size, tint and reading line — never recorded.',
+      'Next cue fires cards, lower-thirds, images and full-screen visuals mid-take, drawn into the export with their animations.',
+      'Retake any single beat — every take is kept and you choose which one is used.',
+      'Per-beat framing and punch-ins smooth the cuts between separately recorded beats.',
+      'Exports a 1080×1920 portrait MP4 with AAC audio, ready for Shorts, Reels and TikTok.',
+      'Tap or hold to record, countdowns, guided beat-to-beat flow, and a one-minute built-in tutorial.',
+      'Local-first: no account, no cloud, no AI, no analytics. Nothing leaves the phone unless you share it.',
+    ],
+    iconImage: '/apps/cueup/icon.png',
+    platforms: ['ios', 'android'],
+    status: 'coming-soon',
+    primaryColor: 'from-amber-400 to-yellow-500',
+    accentColor: 'text-amber-600',
+    bgColor: 'bg-amber-400/10',
+    borderColor: 'border-amber-400/20',
+    pricing: 'Free — one-off AU$2.99 unlock removes the export watermark',
+    systemRequirements: 'iOS 15.0+ (iPhone), Android 7.0 or later',
+    privacyPolicy: {
+      title: 'CueUp — Privacy Policy',
+      lastUpdated: 'October 26, 2026',
+      sections: [
+        {
+          heading: '1. Summary',
+          content: [
+            'CueUp ("the app", "we", "us") does not collect, transmit, or store any of your data on our servers. We do not have servers.',
+            'Your scripts, recordings, imported images and exported videos are created and kept on your device. The app makes no network requests other than the in-app-purchase requests handled by the App Store and Google Play.',
+            'CueUp is published by Curiola Pty Ltd, a company registered in Australia, and listed on boringapps.net.',
+          ],
+        },
+        {
+          heading: '2. Camera and microphone',
+          content: [
+            'CueUp asks for the camera so you can see and record yourself, and for the microphone so your takes have sound.',
+            'Recording only happens while you are pressing or have tapped the record button. Audio is never analysed, transcribed or sent anywhere: CueUp has no speech recognition and no AI.',
+            'You can withdraw either permission at any time in your phone\'s settings. The preview keeps working without the microphone.',
+          ],
+        },
+        {
+          heading: '3. What CueUp stores on your device',
+          content: [
+            '• Your projects: the script, the recorded takes, the cue timings you fired, framing settings, imported images and card presets.',
+            '• Exported videos, until you delete them in the app.',
+            '• Studio preferences (teleprompter speed, text size and so on).',
+            '• A local flag recording whether you have bought the unlock.',
+            'All of this lives in the app\'s private storage. It is removed when you uninstall the app. Deleting a project in the app deletes its files.',
+          ],
+        },
+        {
+          heading: '4. Photos and sharing',
+          content: [
+            'When you import an image for a cue, you pick it with the system photo picker; CueUp only receives the image you chose.',
+            'When you tap Save or Share on an export, CueUp hands that one video to your phone\'s gallery or share sheet. Nothing is uploaded by CueUp itself, and only finished exports can be shared — never your script or raw takes.',
+          ],
+        },
+        {
+          heading: '5. In-app purchase',
+          content: [
+            'CueUp is free to download and use. Videos exported from the free version carry a small "Made with CueUp" mark; a single one-off purchase removes it.',
+            'Purchases are processed entirely by Apple\'s App Store or Google Play. We never see or receive your payment details. The app only stores a local flag indicating the unlock was purchased, and asks the store to restore it when you tap "Restore purchase".',
+          ],
+        },
+        {
+          heading: '6. What we do not do',
+          content: [
+            '• We do not collect personally identifiable information.',
+            '• We do not use analytics or telemetry SDKs of any kind.',
+            '• We do not use third-party crash reporters.',
+            '• We do not track you across apps or websites.',
+            '• We do not sell, share, or process any data.',
+            '• We do not have user accounts or require sign-in.',
+            '• We do not run any backend service that the app talks to (purchases go directly to the platform store).',
+          ],
+        },
+        {
+          heading: '7. Store privacy declarations',
+          content:
+            'The privacy sections on the App Store and Google Play listings are set to "No data collected". The statements in this policy match those declarations. If you find a discrepancy, please email us — we want to know.',
+        },
+        {
+          heading: '8. Children\'s privacy',
+          content:
+            'CueUp does not knowingly collect any information from anyone — children included — because it does not collect information at all.',
+        },
+        {
+          heading: '9. Changes to this policy',
+          content:
+            'If we materially change how the app handles data, this page will be updated and the "Last updated" date above will change.',
+        },
+        {
+          heading: '10. Contact',
+          content: [
+            'If you have questions about this policy or the app\'s behaviour, please contact:',
+            'Curiola Pty Ltd',
+            'Email: hello@boringapps.net',
+            'Web: https://boringapps.net/apps/cueup',
+          ],
+        },
+      ],
+    },
+    support: {
+      intro:
+        'CueUp is built and maintained by Curiola Pty Ltd. It runs entirely on your phone — there is no account to recover and no server to be down. Most things you might want to know are covered below; if not, email us.',
+      contactEmail: 'hello@boringapps.net',
+      sections: [
+        {
+          heading: 'Getting started',
+          content: [
+            'On first launch, tap "Start the tutorial". It creates a one-minute, four-beat project that tells you what to press as you read it: record each beat, fire the cues, open Review, then Export. The graduation-cap button in the library replays the welcome at any time.',
+            'To make your own video, tap New project, write your script on the Script tab — "# Title" names the video and each "## Heading" starts a beat — then tap Studio.',
+          ],
+        },
+        {
+          heading: 'Script cues',
+          content: [
+            'Cues are written as fenced blocks inside a beat, for example a call-to-action card:',
+            ':::{card preset="cta"}',
+            ':::',
+            'Other cues: card (with position, animation, colours), overlay and fullscreen (an image you import on the Assets tab), note (private, shown only in the prompter) and clear. Press Next cue while recording to fire them in order. Have a script in another format? The AI prompt button on the Script tab copies conversion instructions you can paste into any AI chat — CueUp itself never contacts an AI.',
+          ],
+        },
+        {
+          heading: 'Common questions',
+          content: [
+            'Is the teleprompter recorded? — No. The prompter, notes and controls are never part of the video. Only the cues you fire are drawn into the export.',
+            'I fluffed one line. Do I need to re-record everything? — No. Retake just that beat from the Studio or from Review; every other beat keeps its selected take.',
+            'What does the unlock do? — Everything in CueUp is free. Videos exported from the free version carry a small "Made with CueUp" mark in the top corner. The one-off unlock removes it from every new export. Export again to get a clean copy of an earlier video.',
+            'I bought the unlock on another phone — how do I get it here? — Open About (the ⓘ in the library) and tap Restore purchase, using the same Apple ID or Google account.',
+            'Where are my projects stored? — In the app\'s private storage on your phone. They never leave it unless you share an export. Uninstalling the app deletes them, so save or share any video you want to keep first.',
+            'Does CueUp need the internet? — No. It works fully offline. Only the purchase and restore talk to the App Store or Google Play.',
+          ],
+        },
+        {
+          heading: 'Report a bug or request a feature',
+          content:
+            'Email hello@boringapps.net with your phone model, OS version, and a description of what you saw vs what you expected. A screenshot or screen recording helps. We read every message.',
+        },
+        {
+          heading: 'Direct contact',
+          content:
+            'For anything not covered above, email hello@boringapps.net.',
+        },
+      ],
+    },
+  },
+  {
     id: 'huedoku',
     name: 'Huedoku',
     tagline: 'Sudoku, in colour.',
     description:
-      'A serene, colour-driven take on Sudoku for iPhone, iPad, and Mac. Place nine hand-picked pastel hues instead of digits — calm, tactile, and completely offline.',
+      'A serene, colour-driven take on Sudoku for iPhone, iPad, and Android. Place nine hand-picked pastel hues instead of digits — calm, tactile, and completely offline.',
     extendedDescription:
       "Huedoku replaces the digits 1–9 with nine soft pastel hues: fill every row, column, and 3×3 box with each hue exactly once. There are four difficulty tiers from Gentle to Deep, a positional notes mode for pencil-marking candidates, a difficulty-gated hint engine, unlimited undo, and gentle conflict detection. Finish a board and confetti of all nine hues rains down. An optional patterns overlay puts a distinct shape on each hue for colour-blind play. 400 puzzles ship bundled in the app, so it works entirely offline — and your in-progress game is always saved. Gentle and Calm are free to play; a single one-off purchase unlocks Focused and Deep — a support-the-devs deal with no ads and no subscriptions.",
     features: [
@@ -166,14 +320,18 @@ export const APPS: AppMetadata[] = [
       '400 puzzles bundled for fully offline play; in-progress games auto-save.',
     ],
     iconImage: '/apps/huedoku/icon.png',
-    platforms: ['ios', 'mac'],
-    status: 'coming-soon',
+    platforms: ['ios', 'android'],
+    status: 'shipped',
+    appStoreUrl: 'https://apps.apple.com/au/app/huedoku-colour-sudoku/id6775085004',
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=net.boringapps.huedoku',
+    releaseDate: 'June 2026',
+    currentVersion: '1.1.0',
     primaryColor: 'from-violet-500 to-fuchsia-500',
     accentColor: 'text-violet-500',
     bgColor: 'bg-violet-500/10',
     borderColor: 'border-violet-500/20',
     pricing: 'Free — one-off AU$2.99 unlock for the full game',
-    systemRequirements: 'iOS 13.0+, iPadOS 13.0+, macOS 10.15 Catalina or later',
+    systemRequirements: 'iOS 13.0+, iPadOS 13.0+, Android 8.0 or later',
     privacyPolicy: {
       title: 'Huedoku — Privacy Policy',
       lastUpdated: 'June 4, 2026',
@@ -302,7 +460,11 @@ export const APPS: AppMetadata[] = [
     ],
     iconImage: '/apps/pastel-pathways/icon.png',
     platforms: ['ios', 'android'],
-    status: 'coming-soon',
+    status: 'shipped',
+    appStoreUrl: 'https://apps.apple.com/au/app/pastel-pathways/id6776529574',
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=net.boringapps.pastelpathways',
+    releaseDate: 'June 2026',
+    currentVersion: '1.0.1',
     primaryColor: 'from-emerald-400 to-indigo-400',
     accentColor: 'text-emerald-500',
     bgColor: 'bg-emerald-500/10',
@@ -623,7 +785,7 @@ export const APPS: AppMetadata[] = [
     appStoreUrl: 'https://apps.apple.com/app/id6771250351',
     pricing: 'AU$9.99 once-off — on the App Store',
     releaseDate: 'May 2026',
-    currentVersion: '1.0.0',
+    currentVersion: '1.1.4',
     systemRequirements: 'iOS 16+, Android 12+',
     privacyPolicy: {
       title: 'Repsense — Privacy Policy',
@@ -765,7 +927,7 @@ export const APPS: AppMetadata[] = [
     appStoreUrl: 'https://apps.apple.com/au/app/sextant/id6772725984',
     pricing: 'AU$14.99 once-off — on the App Store',
     releaseDate: 'May 2026',
-    currentVersion: '1.0.0',
+    currentVersion: '1.0',
     systemRequirements: 'iOS 16.4+, iPadOS 16.4+, Android 8+',
     privacyPolicy: {
       title: 'Sextant — Privacy Policy',

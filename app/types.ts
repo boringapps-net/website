@@ -40,6 +40,8 @@ export interface AppMetadata {
   borderColor: string;
   screenshots?: { src: string; alt: string }[];
   appStoreUrl?: string;
+  /** Google Play listing, once the app is in production there. */
+  playStoreUrl?: string;
   websiteUrl?: string;
   sourceUrl?: string;
   pricing: string;

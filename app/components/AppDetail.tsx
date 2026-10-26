@@ -110,9 +110,9 @@ export function AppDetail({ app }: AppDetailProps) {
 
           {/* CTAs */}
           <div className="space-y-3">
-            {app.status === 'shipped' && app.appStoreUrl ? (
+            {app.status === 'shipped' && (app.appStoreUrl || app.playStoreUrl) ? (
               <div className="space-y-3">
-                {(() => {
+                {app.appStoreUrl && (() => {
                   const isMac = app.platforms.includes('mac');
                   const badgeSrc = isMac
                     ? 'https://tools.applemediaservices.com/api/badges/download-on-the-mac-app-store/black/en-us?h=60'
@@ -130,6 +130,22 @@ export function AppDetail({ app }: AppDetailProps) {
                     </a>
                   );
                 })()}
+                {app.playStoreUrl && (
+                  <a
+                    href={app.playStoreUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-fit"
+                    aria-label={`Get it on Google Play — ${app.name}`}
+                  >
+                    {/* Google's badge PNG carries its own transparent margin; -m offsets it so it lines up with Apple's. */}
+                    <img
+                      src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                      alt="Get it on Google Play"
+                      className="h-[83px] -m-[11px]"
+                    />
+                  </a>
+                )}
                 {app.websiteUrl && (
                   <a
                     href={app.websiteUrl}
