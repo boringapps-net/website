@@ -169,6 +169,7 @@ export const APPS: AppMetadata[] = [
     iconImage: '/apps/cueup/icon.png',
     platforms: ['ios', 'android'],
     status: 'shipped',
+    appStoreUrl: 'https://apps.apple.com/app/id6826960748',
     playStoreUrl: 'https://play.google.com/store/apps/details?id=net.boringapps.cueup',
     releaseDate: 'October 2026',
     currentVersion: '1.0.0',
